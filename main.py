@@ -32,6 +32,10 @@ def stub():
     return render_template("stub.html")
 
 
+@app.route('/nilf/')
+def nilf():
+    return render_template("nilf.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
