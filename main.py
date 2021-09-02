@@ -27,14 +27,26 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+
+@app.route('/Abby/')
+def Abby():
+    return render_template("Abby.html")
 
 
-@app.route('/nilf/')
-def nilf():
-    return render_template("nilf.html")
+
+@app.route('/Evan/')
+def Evan():
+    return render_template("Evan.html")
+
+
+@app.route('/Natalie/')
+def Natalie():
+    return render_template("Natalie.html")
+
+
+@app.route('/Hassan/')
+def Hassan():
+    return render_template("Hassan.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
