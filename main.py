@@ -10,29 +10,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
-
-
 @app.route('/Abby/')
 def Abby():
     return render_template("Abby.html")
-
-
 
 @app.route('/Evan/')
 def Evan():
@@ -42,7 +22,6 @@ def Evan():
 @app.route('/Natalie/')
 def Natalie():
     return render_template("Natalie.html")
-
 
 @app.route('/Hassan/')
 def Hassan():
