@@ -9,13 +9,23 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <a class="w3-text-gray nav-link" href={{ url_for('index') }}>Portfolio</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/Evan">Evan</a>
-            <a class="nav-link" href="/Hassan">Hassan</a>
-            <a class="nav-link" href="/Abby">Abby</a>
-            <a class="nav-link" href="/Natalie">Natalie</a>
 
+            <!DOCTYPE html>
+            <title>W3.CSS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <body>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-text-gray w3-button">About</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="#" class="w3-bar-item Evan">Evan</a>
+                        <a href="#" class="w3-bar-item Hassan">Hassan</a>
+                        <a href="#" class="w3-bar-item Natalie">Natalie</a>
+                        <a href="#" class="w3-bar-item Abby">Abby</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>

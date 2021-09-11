@@ -10,6 +10,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/Hassan/')
+def Hassan():
+    return render_template("Hassan.html")
+
 @app.route('/Abby/')
 def Abby():
     return render_template("Abby.html")
@@ -18,14 +22,9 @@ def Abby():
 def Evan():
     return render_template("Evan.html")
 
-
 @app.route('/Natalie/')
 def Natalie():
     return render_template("Natalie.html")
-
-@app.route('/Hassan/')
-def Hassan():
-    return render_template("Hassan.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
