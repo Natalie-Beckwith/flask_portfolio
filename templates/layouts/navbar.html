@@ -1,0 +1,31 @@
+<!-- Navigation Bar from bootstrap
+This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/%22%3E%7B%7Bbasename%7D%7D</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+            <a class="w3-text-gray nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <!-- stub is shown using the name of the route -->
+
+            <!DOCTYPE html>
+            <title>W3.CSS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css%22%3E
+            <body>
+                <div class="w3-dropdown-hover">
+            <button class="w3-text-gray w3-button">About</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item Evan">Evan</a>
+                <a href="#" class="w3-bar-item Hassan">Hassan</a>
+                <a href="#" class="w3-bar-item Natalie">Natalie</a>
+                <a href="#" class="w3-bar-item Abby">Abby</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
