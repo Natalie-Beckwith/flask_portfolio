@@ -18,9 +18,14 @@ def Hassan():
 def Abby():
     return render_template("Abby.html")
 
-@app.route('/Evan/')
+@app.route('/Evan', methods=['GET', 'POST'])
 def Evan():
-    return render_template("Evan.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Evan.html", name=name)
+    # starting and empty input default
+    return render_template("Natalie.html", name="World")
 
 @app.route('/Natalie/', methods=['GET', 'POST'])
 def Natalie():
