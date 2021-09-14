@@ -15,22 +15,26 @@
     <!--  <div class="col-12"> -->
     <!--</div> -->
 
-    <div class="col-12" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray; background-color: white;">
+    <div class="center-block" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray;
+                                                                                             background-color: #faf9e3;">
 
-        <h2 style="margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;
-        background-color: white">Hello, {{name}}! Welcome to Natalie's Page!</h2>
+            <h2 style="margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;
+                                              background-color: #faf9e3">Hello, {{name}}! Welcome to Natalie's Page!</h2>
 
-        <form action="/greet/" id="greet" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
-            <input type="submit" value="Greetings!" style="color: #b8b27d">
-        </form>
+        <div class="col-12">
+            <form action="/Natalie/" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!" style="color: #e34542; font-family: 'Courier New'">
+            </form>
+        </div>
     </div>
 
 </body>
 
 <!-- this is the first paragraph code -->
-<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542; background-color: white;" >
+<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+                                                                                            background-color: #faf9e3;" >
 
     <div class="col-12">
     <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here</h5>
@@ -40,14 +44,16 @@
 </div>
 
 <!-- this is the second paragraph code -->
-<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542; background-color: white;" >
+<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+                                                                                            background-color: #faf9e3;" >
 
     <div class="col-12">
         <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here too</h5>
         <p style="font-family: arial; color: darkslategray">enter new body text here too</p>
     </div>
-
 </div>
+
+
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
