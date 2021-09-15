@@ -36,7 +36,7 @@ def Evan():
         if len(name) != 0:  # input field has content
             return render_template("Evan.html", name=name)
     # starting and empty input default
-    return render_template("Evan.html", name="World")
+    return render_template("Evan.html", name="sup")
 
 @app.route('/Natalie/', methods=['GET', 'POST'])
 def Natalie():
