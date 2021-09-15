@@ -8,25 +8,27 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 <!- Try building a new body here ->
+<body style="background-image:url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/tumblr_ngbasnF0bG1qze3hdo1_500.gif);background-position: center; background-repeat: no-repeat; background-size: cover;">
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
-        <p>Hello, {{name}}!</p>
+        <p>hey {{name}}, welcome to hassan's ubertabulous page</p>
     </div>
 
     <div class="col-12">
-        <form action="/Hassan" id="greet" method="POST" >
-            <label for="name">Type a greeting name?</label>
+        <form action="/Hassan/" id="greet" method="POST" >
+            <label for="name">whats ur name?</label>
             <input name="name" id="name">
-            <input type="submit" value="Greetings!">
+            <input type="submit" value="sup">
         </form>
     </div>
 
 
 
 </div>
+</body>
+
 {% endblock %}
 
-<!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}

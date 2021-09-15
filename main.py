@@ -10,9 +10,15 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/Hassan/')
+@app.route('/Hassan/', methods=['GET', 'POST'])
 def Hassan():
-    return render_template("Hassan.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Hassan.html", name=name)
+    # starting and empty input default
+    return render_template("Hassan.html", name="world")
+
 
 @app.route('/Abby/', methods=['GET', 'POST'])
 def Abby():
