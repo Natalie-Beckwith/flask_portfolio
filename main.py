@@ -29,7 +29,7 @@ def Abby():
     # starting and empty input default
     return render_template("Abby.html", name="World")
 
-@app.route('/Evan', methods=['GET', 'POST'])
+@app.route('/Evan/', methods=['GET', 'POST'])
 def Evan():
     if request.form:
         name = request.form.get("name")
