@@ -7,40 +7,63 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-<!- Try building a new body here ->
-<body style="background-image:url(https://thumbs.gfycat.com/EnlightenedUnkemptGrassspider-size_restricted.gif);background-position: center; background-repeat: no-repeat; background-size: cover;">
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <!- Try building a new body here ->
 
-    <!-- this is the code for the spinning mikus .-. -->
-    <div class="center-block">
+    <!-- this is the title and the name bar code -->
+    <body style="background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/345/250/f36.gif');background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+    <!--  <div class="col-12"> -->
+    <!--</div> -->
+
+    <div class="center-block" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray;
+                                                                                             background-color: #faf9e3;">
+
+        <h2 style="margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;
+                                              background-color: #faf9e3">Hello, {{name}}! Welcome to Natalie's Page!</h2>
+
         <div class="col-12">
-            <img src="https://c.tenor.com/G6CaI-iHKnEAAAAC/accension-god.gif" width="246" height="140">
-            <img src="https://c.tenor.com/xzfmV-bTLwEAAAAC/shiteyanyo-speen.gif" width="246" height="140">
-            <img src="https://c.tenor.com/G6CaI-iHKnEAAAAC/accension-god.gif" width="246" height="140">
-            <img src="https://c.tenor.com/xzfmV-bTLwEAAAAC/shiteyanyo-speen.gif" width="246" height="140">
-            <img src="https://c.tenor.com/G6CaI-iHKnEAAAAC/accension-god.gif" width="246" height="140">
-            <img src="https://c.tenor.com/xzfmV-bTLwEAAAAC/shiteyanyo-speen.gif" width="246" height="140">
+            <form action="/Natalie/" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!" style="color: #e34542; font-family: 'Courier New'">
+            </form>
         </div>
     </div>
 
-    <div class="col-12">
-        <p>hey {{name}}, welcome to evans's hatsune miku stan page</p>
+    </body>
+
+    <!-- this is the first paragraph code -->
+    <div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+                                                                                            background-color: #faf9e3;" >
+
+        <div class="col-12">
+            <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here</h5>
+            <p style="font-family: arial; color: darkslategray">enter new body text here</p>
+        </div>
+
     </div>
 
+    <!-- this is the second paragraph code -->
+    <div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+                                                                                            background-color: #faf9e3;" >
 
-    <div class="col-12">
-        <form action="/Evan/" id="greet" method="POST" >
-            <label for="name">whats ur name?</label>
-            <input name="name" id="name">
-            <input type="submit" value="Sugoi!">
-        </form>
+        <div class="col-12">
+            <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here too</h5>
+            <p style="font-family: arial; color: darkslategray">enter new body text here too</p>
+        </div>
+
     </div>
 
+    <!-- this is the gif of the dancing duck :D -->
+    <div class="center-block">
+        <div class="col-12">
+            <img src="https://c.tenor.com/4otr5S3l1agAAAAj/dancing-duckdancing.gif">
+        </div>
+    </div>
 
-</div>
-</body>
 
 {% endblock %}
 
+<!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
