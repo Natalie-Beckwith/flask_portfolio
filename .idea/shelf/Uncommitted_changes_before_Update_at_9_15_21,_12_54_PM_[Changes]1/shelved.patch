@@ -1,0 +1,19 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import \"packages\" from flask\nfrom flask import Flask, render_template, request\n\n# create a Flask instance\napp = Flask(__name__)\n\n\n# connects default URL to render index.html\n@app.route('/')\ndef index():\n    return render_template(\"index.html\")\n\n@app.route('/Hassan/', methods=['GET', 'POST'])\ndef Hassan():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Hassan.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Hassan.html\", name=\"world\")\n\n\n@app.route('/Abby/', methods=['GET', 'POST'])\ndef Abby():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Abby.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Abby.html\", name=\"World\")\n\n@app.route('/Evan', methods=['GET', 'POST'])\ndef Evan():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Evan.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Evan.html\", name=\"World\")\n\n@app.route('/Natalie/', methods=['GET', 'POST'])\ndef Natalie():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Natalie.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Natalie.html\", name=\"World\")\n\n@app.route('/greet', methods=['GET', 'POST'])\ndef greet():\n    # submit button has been pushed\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"greet.html\", name=name)\n    # starting and empty input default\n    return render_template(\"greet.html\", name=\"World\")\n\n# runs the application on the development server\nif __name__ == \"__main__\":\n    app.run(debug=True)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -29,7 +29,7 @@
+     # starting and empty input default
+     return render_template("Abby.html", name="World")
+ 
+-@app.route('/Evan', methods=['GET', 'POST'])
++@app.route('/Evan/', methods=['GET', 'POST'])
+ def Evan():
+     if request.form:
+         name = request.form.get("name")
