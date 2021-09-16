@@ -1,0 +1,17 @@
+Index: templates/nilf.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- Extending the predefined project layout -->\r\n{% extends \"layouts/base.html\" %}\r\n\r\n<!- This variable sets name of browser tab  -->\r\n{% set project = \"Greetings\" %}\r\n\r\n<!- This is a replacement block for Body in base.html -->\r\n{% block body %}\r\n    <!- Try building a new body here ->\r\n    Greetings!\r\n{% endblock %}\r\n\r\n<!- This is turning off birds background from base.html -->\r\n{% block background %}\r\n{% endblock %}\r\n
+===================================================================
+diff --git a/templates/nilf.html b/templates/nilf.html
+--- a/templates/nilf.html	
++++ b/templates/nilf.html	
+@@ -7,7 +7,7 @@
+ <!- This is a replacement block for Body in base.html -->
+ {% block body %}
+     <!- Try building a new body here ->
+-    Greetings!
++    We all float down here...
+ {% endblock %}
+ 
+ <!- This is turning off birds background from base.html -->
