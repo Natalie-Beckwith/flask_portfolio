@@ -1,5 +1,10 @@
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+{% extends "layouts/base.html" %}
 
+{% set project = "Greet" %}
+
+{% block body %}
+
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
   <div class="col-12">
     <p>Hello, {{name}}!</p>
   </div>
@@ -11,4 +16,11 @@
       <input type="submit" value="Greetings!">
     </form>
   </div>
+
 </div>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
