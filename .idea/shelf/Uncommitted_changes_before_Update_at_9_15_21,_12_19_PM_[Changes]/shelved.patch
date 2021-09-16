@@ -1,0 +1,105 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import \"packages\" from flask\nfrom flask import Flask, render_template, request\n\n# create a Flask instance\napp = Flask(__name__)\n\n\n# connects default URL to render index.html\n@app.route('/')\ndef index():\n    return render_template(\"index.html\")\n\n@app.route('/Hassan/')\ndef Hassan():\n    return render_template(\"Hassan.html\")\n\n@app.route('/Abby/')\ndef Abby():\n    return render_template(\"Abby.html\")\n\n@app.route('/Evan', methods=['GET', 'POST'])\ndef Evan():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Evan.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Natalie.html\", name=\"World\")\n\n@app.route('/Natalie/', methods=['GET', 'POST'])\ndef Natalie():\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"Natalie.html\", name=name)\n    # starting and empty input default\n    return render_template(\"Natalie.html\", name=\"World\")\n\n@app.route('/greet', methods=['GET', 'POST'])\ndef greet():\n    # submit button has been pushed\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"greet.html\", name=name)\n    # starting and empty input default\n    return render_template(\"greet.html\", name=\"World\")\n\n# runs the application on the development server\nif __name__ == \"__main__\":\n    app.run(debug=True)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 621732b7e6622170fcc722d4504b44624a13dd5d)
++++ b/main.py	(date 1631722060498)
+@@ -18,14 +18,14 @@
+ def Abby():
+     return render_template("Abby.html")
+ 
+-@app.route('/Evan', methods=['GET', 'POST'])
++@app.route('/Evan/', methods=['GET', 'POST'])
+ def Evan():
+     if request.form:
+         name = request.form.get("name")
+         if len(name) != 0:  # input field has content
+             return render_template("Evan.html", name=name)
+     # starting and empty input default
+-    return render_template("Natalie.html", name="World")
++    return render_template("Evan.html", name="World")
+ 
+ @app.route('/Natalie/', methods=['GET', 'POST'])
+ def Natalie():
+Index: templates/Evan.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"center-block\" style=\"margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;\">\n    <div class=\"col-12\">\n        <p>Hello, {{name}}!</p>\n    </div>\n\n    <div class=\"col-12\">\n        <form action=\"/greet\" id=\"greet\" method=\"POST\" >\n            <label for=\"name\">Type a greeting name?</label>\n            <input name=\"name\" id=\"name\">\n            <input type=\"submit\" value=\"Greetings!\">\n        </form>\n    </div>\n\n</div>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Evan.html b/templates/Evan.html
+--- a/templates/Evan.html	(revision 621732b7e6622170fcc722d4504b44624a13dd5d)
++++ b/templates/Evan.html	(date 1631722367070)
+@@ -4,7 +4,7 @@
+     </div>
+ 
+     <div class="col-12">
+-        <form action="/greet" id="greet" method="POST" >
++        <form action="/Evan/" id="greet" method="POST" >
+             <label for="name">Type a greeting name?</label>
+             <input name="name" id="name">
+             <input type="submit" value="Greetings!">
+Index: templates/Natalie.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n<!-- Extending the predefined project layout -->\n{% extends \"layouts/base.html\" %}\n\n<!- This variable sets name of browser tab  -->\n{% set project = \"Natalie\" %}\n\n<!- This is a replacement block for Body in base.html -->\n{% block body %}\n<!- Try building a new body here ->\n\n<!-- this is the title and the name bar code -->\n<body style=\"background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/345/250/f36.gif');background-position: center; background-repeat: no-repeat; background-size: cover;\">\n\n    <!--  <div class=\"col-12\"> -->\n    <!--</div> -->\n\n    <div class=\"center-block\" style=\"margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray;\n                                                                                             background-color: #faf9e3;\">\n\n            <h2 style=\"margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;\n                                              background-color: #faf9e3\">Hello, {{name}}! Welcome to Natalie's Page!</h2>\n\n        <div class=\"col-12\">\n            <form action=\"/Natalie/\" id=\"greet\" method=\"POST\" >\n                <label for=\"name\">Type a greeting name?</label>\n                <input name=\"name\" id=\"name\">\n                <input type=\"submit\" value=\"Greetings!\" style=\"color: #e34542; font-family: 'Courier New'\">\n            </form>\n        </div>\n    </div>\n\n</body>\n\n<!-- this is the first paragraph code -->\n<div class=\"center-block\" style=\"margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;\n                                                                                            background-color: #faf9e3;\" >\n\n    <div class=\"col-12\">\n    <h5 style=\"font-family: 'Courier New'; color: #e34542; \">enter new header here</h5>\n        <p style=\"font-family: arial; color: darkslategray\">enter new body text here</p>\n    </div>\n\n</div>\n\n<!-- this is the second paragraph code -->\n<div class=\"center-block\" style=\"margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;\n                                                                                            background-color: #faf9e3;\" >\n\n    <div class=\"col-12\">\n        <h5 style=\"font-family: 'Courier New'; color: #e34542; \">enter new header here too</h5>\n        <p style=\"font-family: arial; color: darkslategray\">enter new body text here too</p>\n    </div>\n\n</div>\n\n<!-- this is the gif of the dancing duck :D -->\n<div class=\"center-block\">\n    <div class=\"col-12\">\n    <img src=\"https://c.tenor.com/4otr5S3l1agAAAAj/dancing-duckdancing.gif\">\n    </div>\n</div>\n\n\n{% endblock %}\n\n<!- This is turning off birds background from base.html -->\n{% block background %}\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Natalie.html b/templates/Natalie.html
+--- a/templates/Natalie.html	(revision 621732b7e6622170fcc722d4504b44624a13dd5d)
++++ b/templates/Natalie.html	(date 1631733295764)
+@@ -10,16 +10,17 @@
+ <!- Try building a new body here ->
+ 
+ <!-- this is the title and the name bar code -->
+-<body style="background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/345/250/f36.gif');background-position: center; background-repeat: no-repeat; background-size: cover;">
++<body style="background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/345/250/f36.gif');
++                                   background-position: center; background-repeat: no-repeat; background-size: cover;">
+ 
+     <!--  <div class="col-12"> -->
+     <!--</div> -->
+ 
+-    <div class="center-block" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray;
+-                                                                                             background-color: #faf9e3;">
++    <div class="center-block" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: #4a6345;
++                                                                                           background-color: #faf9e3;">
+ 
+             <h2 style="margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;
+-                                              background-color: #faf9e3">Hello, {{name}}! Welcome to Natalie's Page!</h2>
++                                            background-color: #faf9e3">Hello, {{name}}! Welcome to Natalie's Page!</h2>
+ 
+         <div class="col-12">
+             <form action="/Natalie/" id="greet" method="POST" >
+@@ -34,22 +35,22 @@
+ 
+ <!-- this is the first paragraph code -->
+ <div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+-                                                                                            background-color: #faf9e3;" >
++                                                                                          background-color: #faf9e3;">
+ 
+     <div class="col-12">
+     <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here</h5>
+-        <p style="font-family: arial; color: darkslategray">enter new body text here</p>
++        <p style="font-family: arial; color: #4a6345">enter new body text here</p>
+     </div>
+ 
+ </div>
+ 
+ <!-- this is the second paragraph code -->
+ <div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542;
+-                                                                                            background-color: #faf9e3;" >
++                                                                                          background-color: #faf9e3;">
+ 
+     <div class="col-12">
+         <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here too</h5>
+-        <p style="font-family: arial; color: darkslategray">enter new body text here too</p>
++        <p style="font-family: arial; color: #4a6345">enter new body text here too</p>
+     </div>
+ 
+ </div>
