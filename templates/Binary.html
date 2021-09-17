@@ -154,7 +154,7 @@
                     </tr>
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                            <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                         {% endfor %}
                     </tr>
                 </table>
