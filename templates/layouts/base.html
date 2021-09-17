@@ -7,7 +7,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-{% set basename = "Nighthawk Coding" %}
+{% set basename = "Nilf Slayers" %}
 {% set github = "https://github.com/nighthawkcoders" %}
 {% set twitter = "https://twitter.com/NighthawkCoding" %}
 {% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
@@ -30,7 +30,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         html, body{
-            background-image:url('https://lh5.googleusercontent.com/proxy/FVrZW2SaQySctfOpm4ucQtK0sZofCRyCRS6FwykrBtt96Em7jJinTvDxeRmCxA1LO-0EmLeJub87ma7gzaVKwTZfDU0aQnCDiojyv16OyDlocaROjqdUU9IhupxZVzU=s0-d');background-position: center; background-repeat: no-repeat; background-size: cover;
+            background-image:url('https://wallpaperaccess.com/full/1270167.gif');background-position: center; background-repeat: no-repeat; background-size: cover;
             margin: 0;
             height: 100%;
             animation: fadein 2s;
@@ -131,7 +131,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" >
-                <h1>{{ project }} Welcome to Nilf Slayers!</h1>
+                <h1 style="color: var(--black); margin-top: 3%; font-size: 70px;">{{ project }}Welcome to Nilf Slayers!</h1>
             </div>
 
         </div>
@@ -139,11 +139,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding-left: 10%;">
             {% block links %}
             <div class="col-3">
-                <a href="{{ overview }}" class="btn">Overview</a>
+                <a style="color: var(--black); margin-top: 3%; font-size: 40px;" href="{{ overview }}" class="btn">Overview</a>
             </div>
 
             <div class="col-3">
-                <a href="{{ repo }}" class="btn">Repository</a>
+                <a style="color: var(--black); margin-top: 3%; font-size: 40px;" href="{{ repo }}" class="btn">Repository</a>
             </div>
             {% endblock %}
         </div>
