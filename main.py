@@ -14,42 +14,25 @@ def index():
 def Hassan():
     return render_template("Hassan.html")
 
-@app.route('/Abby/', methods=['GET', 'POST'])
-def Abby():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("Abby.html", name=name)
-    # starting and empty input default
-    return render_template("Abby.html", name="World")
-
-@app.route('/Evan/', methods=['GET', 'POST'])
+@app.route('/Evan/')
 def Evan():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("Evan.html", name=name)
-    # starting and empty input default
-    return render_template("Evan.html", name="World")
+    return render_template("Evan.html")
 
-@app.route('/Natalie/', methods=['GET', 'POST'])
+@app.route('/Abby/')
+def Abby():
+    return render_template("Abby.html")
+
+@app.route('/Natalie/')
 def Natalie():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("Natalie.html", name=name)
-    # starting and empty input default
-    return render_template("Natalie.html", name="World")
+    return render_template("Natalie.html")
 
-@app.route('/greet', methods=['GET', 'POST'])
-def greet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
-    # starting and empty input default
-    return render_template("greet.html", name="World")
+@app.route('/Binary/')
+def Binary():
+    return render_template("Binary.html")
+
+@app.route('/Wireframes/')
+def Wireframes():
+    return render_template("Wireframes.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
