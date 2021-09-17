@@ -30,7 +30,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         html, body{
-            background-image:url('https://wallpaperaccess.com/full/2825724.gif');background-position: center; background-repeat: no-repeat; background-size: cover;
+            background-image:url('https://wallpaperaccess.com/full/2825724.gif');background-position: center;
+                                                                background-repeat: no-repeat; background-size: cover;
             margin: 0;
             height: 100%;
             animation: fadein 2s;
@@ -39,7 +40,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -o-animation: fadein 2s; /* Opera */
             background-color: gray;
             color: white;
-            font-family: American Typewriter;
+            font-family: Futura;
         }
 
         .dark-mode {
@@ -139,12 +140,12 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         <div class="row" style="padding-left: 10%;">
             {% block links %}
-            <div class="col-3">
-                <a style="color: var(--black); margin-top: 3%; font-size: 40px;" href="{{ overview }}" class="btn">Overview</a>
+            <div class="col-5">
+                <a style="color: var(--black); margin-top: 3%; font-size: 40px; background-color: #a66a7a" href="{{ overview }}" class="btn">Overview</a>
             </div>
 
             <div class="col-3">
-                <a style="color: var(--black); margin-top: 3%; font-size: 40px;" href="{{ repo }}" class="btn">Repository</a>
+                <a style="color: var(--black); margin-top: 3%; font-size: 40px; background-color: #a66a7a" href="{{ repo }}" class="btn">Repository</a>
             </div>
             {% endblock %}
         </div>
