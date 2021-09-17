@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b72edab8-751a-4c53-939a-9554b5ef517f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Binary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Natalie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Natalie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <workItem from="1631562140764" duration="4488000" />
       <workItem from="1631732910242" duration="3551000" />
       <workItem from="1631901155345" duration="56000" />
-      <workItem from="1631901216346" duration="3809000" />
+      <workItem from="1631901216346" duration="4500000" />
     </task>
     <task id="LOCAL-00001" summary="fixed abby greet page">
       <created>1631733501621</created>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631902605560</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edited home page and greet page">
+      <created>1631909256155</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631909256155</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
