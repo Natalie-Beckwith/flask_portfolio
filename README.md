@@ -6,3 +6,8 @@
 - Created a dropdown menu called About which will hold all about pages. This is WIP
 - Updated Natalie.html to add a theme
 - Group mates all reviewed CSS content
+
+Name  | Description  | Link
+------------- | -------------  | -------------
+Content Cell  | Content Cell   | Content Cell
+Content Cell  | Content Cell   | Content Cell
