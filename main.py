@@ -26,7 +26,7 @@ def Abby():
 def Natalie():
     return render_template("Natalie.html")
 
-@app.route('/Binary/')
+@app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
     return render_template("Binary.html")
 

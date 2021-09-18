@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% extends "layouts/base.html" %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -19,7 +19,7 @@
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}'
 
-{% block meta %}
+{% block body %}
     <title>Binary page</title>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
@@ -162,4 +162,5 @@
 
         </div>
     </div>
+
 {% endblock %}
