@@ -3,11 +3,16 @@
 
 [Week 4](week4)
 
+[Week 5](week5)
 
-&nbsp;
+
+## Pair Journals
+[Evan & Hassan's Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit)
+
+[Natalie & Abby's Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit)
 
 
-## Contributors
+## **Contributors**
 Name | Github Profile | Tasks | Scrum Board | Commits
 -- | -- | -- | -- | -- |
 Evan | [@baconlolz]() | [Tickets]() | [Scrum Board]() | [Commits]()
@@ -22,7 +27,6 @@ Abby | [@abigail-peltz]() | [Tickets]() | [Scrum Board]() | [Commits]()
 <a name="week4"></a>
 
 ## **Week 4**
-
 Description | Link
 --          | --
 Added a home page | [base.html](https://github.com/BaconLolz/flask_portfolio/blob/main/templates/layouts/base.html)
@@ -44,7 +48,6 @@ Fixed our greet page which was bugging | [greet.html](https://github.com/BaconLo
 <a name="week3"></a>
 
 ## **Week 3**
-
 Description | Link
 --          | --
 Created html files including the 'greet' code | [greet.html](https://github.com/BaconLolz/flask_portfolio/blob/main/templates/greet.html)
