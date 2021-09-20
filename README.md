@@ -1,15 +1,27 @@
 ## Table of Contents
-[Week of 9/6/21](#9/6/21)
+[Week 3](week3)
 
-[Week of 9/13/21](#9/13/21)
+[Week 4](week4)
 
 
 &nbsp;
 
 
-<a name="9/13/21"></a>
+## Contributors
+Name | Github Profile | Tasks | Scrum Board | Commits
+-- | -- | -- | -- | -- |
+Evan | [@baconlolz]() | [Tickets]() | [Scrum Board]() | [Commits]()
+Natalie | [@natalie-beckwith]() | [Tickets]() | [Scrum Board]() | [Commits]()
+Hassan | [@ricesushi1]() | [Tickets]() | [Scrum Board]() | [Commits]()
+Abby | [@abigail-peltz]() | [Tickets]() | [Scrum Board]() | [Commits]()
 
-## **Week of 9/13/21**
+
+&nbsp;
+
+
+<a name="week4"></a>
+
+## **Week 4**
 
 Description | Link
 --          | --
@@ -29,9 +41,9 @@ Fixed our greet page which was bugging | [greet.html](https://github.com/BaconLo
 &nbsp;
 
 
-<a name="9/6/21"></a>
+<a name="week3"></a>
 
-## **Week of 9/6/21**
+## **Week 3**
 
 Description | Link
 --          | --
