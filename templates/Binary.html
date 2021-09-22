@@ -21,7 +21,23 @@
 
 {% block body %}
     <title>Binary page</title>
-    <script>
+
+<script>
+    document.getElementById("decimalInputButton").addEventListener('click', myFunction);
+
+    function myFunction() {
+        alert ("YO");
+        document.getElementById("debug").value = document.getElementById("decimalInput").value;
+    }
+
+    const decimalInputButton = document.querySelector('#decimalInputButton');
+    decimalInputButton.addEventListener('click', myFunction);
+//    decimalInputButton.addEventListener('click', event => {
+//        document.getElementById("debug").value = document.getElementById("decimalInput").value;
+//    })
+</script>
+
+<script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
         function getBits() {
@@ -113,11 +129,11 @@
         }
     </script>
 
-    <h1 class="text-center">Binary Math with Conversions</h1>
+    <h1 class="text-center" style="background-color: white; color: #a66a7a">Binary Math with Conversions</h1>
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-8">
+            <div class="col-8" style="background-color: white; color: #a66a7a">
                 <table class="table">
                     <tr id="table">
                         <th>Plus</th>
@@ -142,7 +158,7 @@
                 </table>
             </div>
 
-            <div class="col-12">
+            <div class="col-12" style="background-color: white; color: #a66a7a">
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}
@@ -157,6 +173,15 @@
                         {% endfor %}
                     </tr>
                 </table>
+                <form onsubmit="myFunction()" id="decimalInputForm" method="get">
+                    <label for="decimalInput">Type any decimal number?</label>
+                    <input type="text" id="decimalInput" name="decimalInput">
+
+                    <label for="debug">DEBUG</label>
+                    <input type="text" id="debug" name="debug">
+
+                    <input type="submit" name="decimalInputButton" value="go!">
+                </form>
             </div>
 
         </div>
