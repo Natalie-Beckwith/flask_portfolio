@@ -15,10 +15,10 @@
 ## **Contributors**
 Name | Github Profile | Tasks | Scrum Board | Commits
 -- | -- | -- | -- | -- |
-Evan | [@baconlolz]() | [Tickets]() | [Scrum Board]() | [Commits]()
-Natalie | [@natalie-beckwith]() | [Tickets]() | [Scrum Board]() | [Commits]()
-Hassan | [@ricesushi1]() | [Tickets]() | [Scrum Board]() | [Commits]()
-Abby | [@abigail-peltz]() | [Tickets]() | [Scrum Board]() | [Commits]()
+Evan | [@baconlolz](https://github.com/BaconLolz) | [Tickets](https://github.com/BaconLolz/flask_portfolio/issues/assigned/BaconLolz) | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1?card_filter_query=assignee%3Abaconlolz) | [Commits](https://github.com/BaconLolz/flask_portfolio/commits?author=BaconLolz)
+Natalie | [@natalie-beckwith](https://github.com/Natalie-Beckwith) | [Tickets](https://github.com/BaconLolz/flask_portfolio/issues/assigned/Natalie-Beckwith) | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1?card_filter_query=assignee%3Anatalie-beckwith) | [Commits](https://github.com/BaconLolz/flask_portfolio/commits?author=Natalie-Beckwith)
+Hassan | [@ricesush1](https://github.com/ricesush1) | [Tickets](https://github.com/BaconLolz/flask_portfolio/issues/assigned/ricesush1) | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1?card_filter_query=assignee%3Aricesush1) | [Commits](https://github.com/BaconLolz/flask_portfolio/commits?author=ricesush1)
+Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://github.com/BaconLolz/flask_portfolio/issues/assigned/Abigail-Peltz) | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1?card_filter_query=assignee%3Aabigail-peltz) | [Commits](https://github.com/BaconLolz/flask_portfolio/commits?author=Abigail-Peltz)
 
 
 &nbsp;
