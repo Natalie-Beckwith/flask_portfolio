@@ -14,8 +14,8 @@
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
-{% set imgBulbOff = "/static/assets/bulb_off.png" %}
+{% set imgBulbOn = "/static/assets/bulbon.png" %}
+{% set imgBulbOff = "/static/assets/bulboff.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}'
 
@@ -87,13 +87,13 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("{{ imgBulbOn }}")) {
+            if (image.src.match("{{ imgbulbon }}")) {
                 dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
+                image.src = "{{ imgbulboff }}";
                 butt.innerHTML = "{{ msgTurnOn }}";
             } else {
                 dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
+                image.src = "{{ imgbulbon }}";
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
@@ -119,7 +119,7 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                    document.getElementById('bulb' + i).src = "{{ imgbulbon }}";
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
@@ -141,7 +141,7 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
-                        <!-- Hack: display ASCII label for printable character(s)  -->
+                        <!-- Hack: display ASCII label for printable character(s) (Done) -->
                         <th>ASCII</th>
                         <th>Minus</th>
                     </tr>
@@ -162,7 +162,7 @@
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgbulboff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
