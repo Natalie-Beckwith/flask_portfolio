@@ -28,11 +28,17 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 <a name="week5"></a>
 
-
-
 ## **Week 5**
-Description | Link
---          | --
+
+### TPT Activities
+
+Pair | TPT Notes | Grade
+|--   | --       | --
+| Hassan \& Evan | [Pair Journal]() | -/3
+Abby \& Natalie | [Pair Journal]() | -/3
+
+### TPT Activities
+
 
 
 &nbsp;
