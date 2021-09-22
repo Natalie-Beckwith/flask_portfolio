@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b72edab8-751a-4c53-939a-9554b5ef517f" name="Changes" comment="binary :)">
-      <change beforePath="$PROJECT_DIR$/static/assets/bulb_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/bulb_on.gif" beforeDir="false" />
+    <list default="true" id="b72edab8-751a-4c53-939a-9554b5ef517f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Binary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632168637023</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="binary :)">
+      <created>1632340318016</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632340318016</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +220,8 @@
     <MESSAGE value="edited home page and greet page" />
     <MESSAGE value="hi" />
     <MESSAGE value="added light bulb images" />
-    <option name="LAST_COMMIT_MESSAGE" value="added light bulb images" />
+    <MESSAGE value="binary :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="binary :)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flask_portfolio$flask_portfolio.coverage" NAME="flask_portfolio Coverage Results" MODIFIED="1631046662230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

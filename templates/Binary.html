@@ -143,12 +143,12 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="text-center">Binary Math with Conversions</h1>
+<h1 class="text-center" style="background-color: white; color: #a66a7a">Binary Math with Conversions</h1>
 <div class="container">
     <div class="row justify-content-md-center">
 
         <div class="col-8">
-            <table class="table">
+            <table class="table" style="background-color: white; color: #a66a7a">
                 <tr id="table">
                     <th>Plus</th>
                     <th>Binary</th>
@@ -172,17 +172,17 @@
         </div>
 
         <div class="col-12">
-            <table class="table">
+            <table class="table" style="background-color: white; color: #a66a7a">
                 <tr>
                     {% for i in range(BITS) %}
                     <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')" style="background-color: white; color: #a66a7a">{{ msgTurnOn }}</button>
                     </td>
                     {% endfor %}
                 </tr>
                 <tr>
                     {% for i in range(BITS) %}
-                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly style="background-color: white; color: #a66a7a"></td>
                     {% endfor %}
                 </tr>
             </table>
