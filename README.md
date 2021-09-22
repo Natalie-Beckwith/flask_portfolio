@@ -1,16 +1,4 @@
-## Table of Contents
-[Week 3](week3)
-
-[Week 4](week4)
-
-[Week 5](week5)
-
-
-## Pair Journals
-[Evan & Hassan's Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit)
-
-[Natalie & Abby's Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit)
-
+# Period 4 Nilf Slayers
 
 ## **Contributors**
 Name | Github Profile | Tasks | Scrum Board | Commits
@@ -21,11 +9,27 @@ Hassan | [@ricesush1](https://github.com/ricesush1) | [Tickets](https://github.c
 Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://github.com/BaconLolz/flask_portfolio/issues/assigned/Abigail-Peltz) | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1?card_filter_query=assignee%3Aabigail-peltz) | [Commits](https://github.com/BaconLolz/flask_portfolio/commits?author=Abigail-Peltz)
 
 
+## Pair Journals
+[Evan & Hassan's Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit)
+
+[Natalie & Abby's Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit)
+
+
+## Table of Contents
+[Week 3](#week3)
+
+[Week 4](#week4)
+
+[Week 5](#week5)
+
+
 &nbsp;
 
 
-<a name="week5"></a
-  
+<a name="week5"></a>
+
+
+
 ## **Week 5**
 Description | Link
 --          | --
