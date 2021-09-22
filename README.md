@@ -37,8 +37,20 @@ Pair | TPT Notes | Grade
 | Hassan \& Evan | [Pair Journal]() | -/3
 Abby \& Natalie | [Pair Journal]() | -/3
 
-### TPT Activities
+### Team Scoring
+Requirement | Evidence | Grade
+|--         |--        |--
+Each member has contributed to rgb.html in the page | [Scrum Board](https://github.com/BaconLolz/flask_portfolio/projects/1) | -/1
 
+### Individual Scoring
+
+
+Name | Requirement | Evidence of Work | Grade
+|--  |--           |--                |--
+Evan | Integrate "RGB Values with an Image" into project | [Ticket]() | -/1
+Natalie | Integrate "RGB Values with an Image" into project | [Ticket]() | -/1
+Abby | Integrate "RGB Values with an Image" into project | [Ticket]() | -/1
+Hassan | Integrate "RGB Values with an Image" into project | [Ticket]() | -/1
 
 
 &nbsp;
