@@ -1,0 +1,244 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_9_10_21__9_47_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21__9_47_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21__9_47_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21__9_47_PM__Changes_.xml	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
++++ /dev/null	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]" date="1631335712580" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 9/10/21, 9:47 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
++++ /dev/null	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
+@@ -1,131 +0,0 @@
+-Index: main.py
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+># import \"packages\" from flask\nfrom flask import Flask, render_template, request\n\n# create a Flask instance\napp = Flask(__name__)\n\n\n# connects default URL to render index.html\n@app.route('/')\ndef index():\n    return render_template(\"index.html\")\n\n@app.route('/Abby/')\ndef Abby():\n    return render_template(\"Abby.html\")\n\n@app.route('/Evan/')\ndef Evan():\n    return render_template(\"Evan.html\")\n\n\n@app.route('/Natalie/')\ndef Natalie():\n    return render_template(\"Natalie.html\")\n\n@app.route('/Hassan/')\ndef Hassan():\n    return render_template(\"Hassan.html\")\n\n@app.route('/greet', methods=['GET', 'POST'])\ndef greet():\n    # submit button has been pushed\n    if request.form:\n        name = request.form.get(\"name\")\n        if len(name) != 0:  # input field has content\n            return render_template(\"greet.html\", name=name)\n    # starting and empty input default\n    return render_template(\"greet.html\", name=\"World\")\n\n\n# runs the application on the development server\nif __name__ == \"__main__\":\n    app.run(debug=True)\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/main.py b/main.py
+---- a/main.py	(revision b3545b447adcbaf44e6e9d6b52001ce052080cca)
+-+++ b/main.py	(date 1631251635750)
+-@@ -10,32 +10,15 @@
+- def index():
+-     return render_template("index.html")
+- 
+--@app.route('/Abby/')
+--def Abby():
+--    return render_template("Abby.html")
+--
+--@app.route('/Evan/')
+--def Evan():
+--    return render_template("Evan.html")
+--
+--
+--@app.route('/Natalie/')
+-+@app.route('/Natalie', methods=['GET', 'POST'])
+- def Natalie():
+--    return render_template("Natalie.html")
+--
+--@app.route('/Hassan/')
+--def Hassan():
+--    return render_template("Hassan.html")
+--
+--@app.route('/greet', methods=['GET', 'POST'])
+--def greet():
+-     # submit button has been pushed
+-     if request.form:
+-         name = request.form.get("name")
+-         if len(name) != 0:  # input field has content
+--            return render_template("greet.html", name=name)
+-+            return render_template("Natalie.html", name=name)
+-     # starting and empty input default
+--    return render_template("greet.html", name="World")
+-+    return render_template("Natalie.html", name="World")
+- 
+- 
+- # runs the application on the development server
+-Index: templates/layouts/navbar.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!-- Navigation Bar from bootstrap\nThis HTML is setup as a fragment allowing it to be \"included\" by other HTML files via Jinja2\n-->\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <a class=\"navbar-brand\" href=\"https://csp.nighthawkcodingsociety.com/\">{{basename}}</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n        <div class=\"navbar-nav\">\n            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->\n            <a class=\"nav-link\" href={{ url_for('index') }}>Portfolio</a>\n            <!-- stub is shown using the name of the route -->\n            <a class=\"nav-link\" href=\"/greet\">Evan</a>\n            <a class=\"nav-link\" href=\"/greet\">Hassan</a>\n            <a class=\"nav-link\" href=\"/greet\">Abby</a>\n            <a class=\"nav-link\" href=\"/greet\">Natalie</a>\n\n\n\n\n\n        </div>\n    </div>\n</nav>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/templates/layouts/navbar.html b/templates/layouts/navbar.html
+---- a/templates/layouts/navbar.html	(revision b3545b447adcbaf44e6e9d6b52001ce052080cca)
+-+++ b/templates/layouts/navbar.html	(date 1631252384908)
+-@@ -14,7 +14,7 @@
+-             <a class="nav-link" href="/greet">Evan</a>
+-             <a class="nav-link" href="/greet">Hassan</a>
+-             <a class="nav-link" href="/greet">Abby</a>
+--            <a class="nav-link" href="/greet">Natalie</a>
+-+            <a class="nav-link" href="/Natalie">Natalie</a>
+- 
+- 
+- 
+-Index: templates/Natalie.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/templates/Natalie.html b/templates/Natalie.html
+-new file mode 100644
+---- /dev/null	(date 1631335479461)
+-+++ b/templates/Natalie.html	(date 1631335479461)
+-@@ -0,0 +1,55 @@
+-+
+-+<!-- Extending the predefined project layout -->
+-+{% extends "layouts/base.html" %}
+-+
+-+<!- This variable sets name of browser tab  -->
+-+{% set project = "Natalie" %}
+-+
+-+<!- This is a replacement block for Body in base.html -->
+-+{% block body %}
+-+<!- Try building a new body here ->
+-+
+-+<!-- this is the title and the name bar code -->
+-+<body style="background-image:url('https://i.kym-cdn.com/photos/images/newsfeed/001/345/250/f36.gif');background-position: center; background-repeat: no-repeat; background-size: cover;">
+-+
+-+    <!--  <div class="col-12"> -->
+-+    <!--</div> -->
+-+
+-+    <div class="col-12" style="margin: 2% 5% 7%; text-align:left; font-family: Arial; color: darkslategray; background-color: white;">
+-+
+-+        <h2 style="margin: 2% 5% 7%; text-align:left; font-family: 'Courier New'; color: #e34542;
+-+        background-color: white">Hello, {{name}}! Welcome to Natalie's Page!</h2>
+-+
+-+        <form action="/Natalie" id="greet" method="POST" >
+-+            <label for="name">Type a greeting name?</label>
+-+            <input name="name" id="name">
+-+            <input type="submit" value="Greetings!" style="color: #b8b27d">
+-+        </form>
+-+    </div>
+-+
+-+</body>
+-+
+-+<!-- this is the first paragraph code -->
+-+<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542; background-color: white;" >
+-+
+-+    <div class="col-12">
+-+    <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here</h5>
+-+        <p style="font-family: arial; color: darkslategray">enter new body text here</p>
+-+    </div>
+-+
+-+</div>
+-+
+-+<!-- this is the second paragraph code -->
+-+<div class="center-block" style="margin: 2% 5% 7%; text-align: left; font-family: 'arial'; color: #e34542; background-color: white;" >
+-+
+-+    <div class="col-12">
+-+        <h5 style="font-family: 'Courier New'; color: #e34542; ">enter new header here too</h5>
+-+        <p style="font-family: arial; color: darkslategray">enter new body text here too</p>
+-+    </div>
+-+
+-+</div>
+-+{% endblock %}
+-+
+-+<!- This is turning off birds background from base.html -->
+-+{% block background %}
+-+{% endblock %}
+-\ No newline at end of file
+Index: templates/Wireframes.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"layouts/base.html\" %}\n\n{% set project = \"Wireframes\" %}\n\n{% block body %}\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Nilf Slayers Wireframes</title>\n\n    <h2>Welcome to our wireframes!</h2>\n\n\n</head>\n<body>\n\n</body>\n</html>\n\n{% endblock %}\n\n{% block background %}\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Wireframes.html b/templates/Wireframes.html
+--- a/templates/Wireframes.html	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
++++ b/templates/Wireframes.html	(date 1631940991515)
+@@ -10,8 +10,8 @@
+     <meta charset="UTF-8">
+     <title>Nilf Slayers Wireframes</title>
+ 
+-    <h2>Welcome to our wireframes!</h2>
+-
++    <h2>Welcome to Our Wireframes!</h2>
++    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Juha7L30H2HM239TsT25z%2FProject-Design-Process%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+ 
+ </head>
+ <body>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b72edab8-751a-4c53-939a-9554b5ef517f\" name=\"Changes\" comment=\"binary :(\">\n      <change beforePath=\"$PROJECT_DIR$/templates/Binary.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Binary.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"ProjectId\" id=\"1xYFMxs2LxffW0ntKezc1YWBcKA\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <OptionsSetting value=\"false\" id=\"Update\" />\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"project.structure.last.edited\" value=\"Problems\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RunManager\" selected=\"Python.main\">\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"C:\\Users\\evanj\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <module name=\"\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"flask_portfolio\" type=\"Python.FlaskServer\">\n      <module name=\"flask_portfolio\" />\n      <option name=\"target\" value=\"$PROJECT_DIR$/main.py\" />\n      <option name=\"targetType\" value=\"PATH\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\n      <method v=\"2\" />\n    </configuration>\n    <list>\n      <item itemvalue=\"Flask server.flask_portfolio\" />\n      <item itemvalue=\"Python.main\" />\n    </list>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b72edab8-751a-4c53-939a-9554b5ef517f\" name=\"Changes\" comment=\"\" />\n      <created>1630524070479</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1630524070479</updated>\n      <workItem from=\"1630524072100\" duration=\"412000\" />\n      <workItem from=\"1630524505645\" duration=\"2322000\" />\n      <workItem from=\"1630609973091\" duration=\"1556000\" />\n      <workItem from=\"1630699765171\" duration=\"1330000\" />\n      <workItem from=\"1631129255636\" duration=\"1394000\" />\n      <workItem from=\"1631216447989\" duration=\"650000\" />\n      <workItem from=\"1631305336729\" duration=\"591000\" />\n      <workItem from=\"1631560188987\" duration=\"358000\" />\n      <workItem from=\"1631562140764\" duration=\"4488000\" />\n      <workItem from=\"1631732910242\" duration=\"3551000\" />\n      <workItem from=\"1631901155345\" duration=\"56000\" />\n      <workItem from=\"1631901216346\" duration=\"4500000\" />\n      <workItem from=\"1631936867266\" duration=\"2862000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"fixed abby greet page\">\n      <created>1631733501621</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631733501621</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"added background to abby page\">\n      <created>1631735399692</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631735399692</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Eat it hassan\">\n      <created>1631846902089</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631846902089</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Eat it hassan\">\n      <created>1631846941702</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631846941702</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"edited home page\">\n      <created>1631901613089</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631901613089</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"edited home page and greet page\">\n      <created>1631902605560</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631902605560</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"edited home page and greet page\">\n      <created>1631909256155</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631909256155</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"hi\">\n      <created>1631910292315</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631910292315</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"hi\">\n      <created>1631910827768</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631910827768</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Worked on about pages\">\n      <created>1631936204330</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631936204330</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"binary :(\">\n      <created>1631938890718</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1631938890718</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"12\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"fixed abby greet page\" />\n    <MESSAGE value=\"added background to abby page\" />\n    <MESSAGE value=\"Eat it hassan\" />\n    <MESSAGE value=\"edited home page\" />\n    <MESSAGE value=\"edited home page and greet page\" />\n    <MESSAGE value=\"hi\" />\n    <MESSAGE value=\"Worked on about pages\" />\n    <MESSAGE value=\"binary :(\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"binary :(\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/flask_portfolio$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1631937830132\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n    <SUITE FILE_PATH=\"coverage/flask_portfolio$flask_portfolio.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1630042416324\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n    <SUITE FILE_PATH=\"coverage/flask_portfolio$Unnamed.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1630525332984\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c414c33d00add43dc5efd18530d7ade8afee2450)
++++ b/.idea/workspace.xml	(date 1632168632209)
+@@ -5,7 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="b72edab8-751a-4c53-939a-9554b5ef517f" name="Changes" comment="binary :(">
+-      <change beforePath="$PROJECT_DIR$/templates/Binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Binary.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21,_9_47_PM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_10_21__9_47_PM__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/Wireframes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Wireframes.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -53,7 +56,7 @@
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="C:\Users\evanj\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="false" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+@@ -67,6 +70,19 @@
+       <option name="MODULE_MODE" value="false" />
+       <option name="REDIRECT_INPUT" value="false" />
+       <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration default="true" type="Python.FlaskServer">
++      <module name="flask_portfolio" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
+       <method v="2" />
+     </configuration>
+     <configuration name="flask_portfolio" type="Python.FlaskServer">
+@@ -110,6 +126,9 @@
+       <workItem from="1631901155345" duration="56000" />
+       <workItem from="1631901216346" duration="4500000" />
+       <workItem from="1631936867266" duration="2862000" />
++      <workItem from="1632161849087" duration="1000" />
++      <workItem from="1632164036096" duration="153000" />
++      <workItem from="1632164884927" duration="2678000" />
+     </task>
+     <task id="LOCAL-00001" summary="fixed abby greet page">
+       <created>1631733501621</created>
+@@ -218,8 +237,8 @@
+     <option name="LAST_COMMIT_MESSAGE" value="binary :(" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/flask_portfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1631937830132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/flask_portfolio$flask_portfolio.coverage" NAME="main Coverage Results" MODIFIED="1630042416324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/flask_portfolio$flask_portfolio.coverage" NAME="flask_portfolio Coverage Results" MODIFIED="1631046662230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/flask_portfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1632164893369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/flask_portfolio$Unnamed.coverage" NAME="main Coverage Results" MODIFIED="1630525332984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
