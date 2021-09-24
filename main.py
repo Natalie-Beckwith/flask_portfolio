@@ -15,9 +15,15 @@ def index():
 def Hassan():
     return render_template("Hassan.html")
 
-@app.route('/Evan/')
+@app.route('/Evan/', methods=['GET', 'POST'])
 def Evan():
-    return render_template("Evan.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Evan.html", name=name)
+    # starting and empty input default
+    return render_template("Evan.html", name="User")
 
 @app.route('/Abby/')
 def Abby():
@@ -35,7 +41,15 @@ def Natalie():
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
-    return render_template("Binary.html")
+    bitWidth = 8;
+    if request.form:
+        bitWidthText = request.form.get("bitWidth")
+        if len(bitWidthText) != 0:  # input field has content
+            bitWidth = int (bitWidthText)
+            return render_template("Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+
+    # starting and empty input default
+    return render_template("Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app.route('/Wireframes/')
 def Wireframes():
@@ -45,10 +59,10 @@ def Wireframes():
 def Journals():
     return render_template("Journals.html")
 
-@app.route('/rgb', methods=["GET", "POST"])
-def rgb():
-    return render_template('rgb.html', colors=color_data())
 
+#@app.route('/rgb', methods=["GET", "POST"])
+#def rgb():
+#    return render_template('rgb.html', colors=color_data())
 
 
 @app.route('/greet/', methods=['GET', 'POST'])
