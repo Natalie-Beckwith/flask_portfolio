@@ -8,8 +8,6 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
-{% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
@@ -25,8 +23,10 @@
     /* Below are JavaScript functions or Code Blocks */
 
     // Global variables for Javascript sequence of code in <script> tags
-    const BITS = '{{ BITS }}'; // number of BITS (or Bulbs) displayed on screen
-    let max = '{{ MAX }}'; let MAX = parseInt(max, 10);  // MAX integer value of bits
+
+    let BITS = {{ BITS }}; // number of BITS (or Bulbs) displayed on screen
+    let max = ((2 ** BITS) - 1);
+    let MAX = parseInt(max, 10);  // MAX integer value of bits
 
     /* This function reads digit<n> variables and creates a string of bits
         parameter: <none>
@@ -146,6 +146,11 @@
 <h1 class="text-center" style="background-color: white; color: #a66a7a">Binary Math with Conversions</h1>
 <div class="container">
     <div class="row justify-content-md-center">
+        <form method="POST"
+        <label for="bitWidth"> Enter bit width:</label>
+        <input type="text" id="bitWidth" name="bitWidth" value="{{ BITS }}">
+        <input type="submit" value="Go">
+        </form>
 
         <div class="col-8">
             <table class="table" style="background-color: white; color: #a66a7a">
@@ -187,7 +192,6 @@
                 </tr>
             </table>
         </div>
-
     </div>
 </div>
 {% endblock %}

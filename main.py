@@ -35,7 +35,15 @@ def Natalie():
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
-    return render_template("Binary.html")
+    bitWidth = 8;
+    if request.form:
+        bitWidthText = request.form.get("bitWidth")
+        if len(bitWidthText) != 0:  # input field has content
+            bitWidth = int (bitWidthText)
+            return render_template("Binary.html", BITS=bitWidth)
+
+    # starting and empty input default
+    return render_template("Binary.html", BITS= bitWidth)
 
 @app.route('/Wireframes/')
 def Wireframes():
