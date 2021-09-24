@@ -4,16 +4,15 @@
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
 
-<!-- Hack: Build form to drive bit size dynamic updates
+<!-- DONE Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
+<!-- DONE Hack: use 8 as default -->
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulbon.png" %}
-{% set imgBulbOff = "/static/assets/bulboff.png" %}
+
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -27,6 +26,8 @@
     let BITS = {{ BITS }}; // number of BITS (or Bulbs) displayed on screen
     let max = ((2 ** BITS) - 1);
     let MAX = parseInt(max, 10);  // MAX integer value of bits
+    let imgBulbOn = "{{imgBulbOn}}";
+    let imgBulbOff = "{{imgBulbOff}}";
 
     /* This function reads digit<n> variables and creates a string of bits
         parameter: <none>
