@@ -40,10 +40,10 @@ def Binary():
         bitWidthText = request.form.get("bitWidth")
         if len(bitWidthText) != 0:  # input field has content
             bitWidth = int (bitWidthText)
-            return render_template("Binary.html", BITS=bitWidth)
+            return render_template("Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
     # starting and empty input default
-    return render_template("Binary.html", BITS= bitWidth)
+    return render_template("Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app.route('/Wireframes/')
 def Wireframes():
