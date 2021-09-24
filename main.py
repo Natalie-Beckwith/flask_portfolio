@@ -11,9 +11,15 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/Hassan/')
+@app.route('/Hassan/', methods=['GET', 'POST'])
 def Hassan():
-    return render_template("Hassan.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Hassan.html", name=name)
+    # starting and empty input default
+    return render_template("Hassan.html", name="User")
 
 @app.route('/Evan/', methods=['GET', 'POST'])
 def Evan():
@@ -25,9 +31,15 @@ def Evan():
     # starting and empty input default
     return render_template("Evan.html", name="User")
 
-@app.route('/Abby/')
+@app.route('/Abby/', methods=['GET', 'POST'])
 def Abby():
-    return render_template("Abby.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Abby.html", name=name)
+    # starting and empty input default
+    return render_template("Abby.html", name="User")
 
 @app.route('/Natalie/', methods=['GET', 'POST'])
 def Natalie():
