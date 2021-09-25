@@ -12,7 +12,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 ## Pair Journals
 [Evan & Hassan's Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit)
 
-[Natalie & Abby's Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit)
+[Natalie & Abby's Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit?usp=sharing)
 
 
 ## Table of Contents
