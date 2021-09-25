@@ -22,6 +22,33 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 [Week 5](#week5)
 
+[Week 6](#week6)
+
+
+&nbsp;
+
+
+<a name="week6"></a>
+  
+## **Week 6**
+
+### RGB Group Work
+Requirement | Evidence | Grade
+|--         |--        |--
+Finish RGB.html | [Scrum Board]() | -/2
+  
+### RGB Indiviudal Work
+Pair | Requirement | Evidence | Grade
+|--  |--       |--        |--
+Evan \& Hassan | Finish RGB.html | [Ticket]() | -/1
+Natalie \& Abby | Finish RGB.html | [Ticket]() | -/1
+
+### TPT Scoring
+Pair | Requirement | Journal | Grade
+|--  |--           |--       |--
+Evan \& Hassan | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit) | -/2
+Natalie \& Abby | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit?usp=sharing) | -/2
+
 
 &nbsp;
 
@@ -34,7 +61,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 Pair | TPT Notes | Grade
 |--   | --       | --
-| Hassan \& Evan | [Pair Journal]() | -/3
+Hassan \& Evan | [Pair Journal]() | -/3
 Abby \& Natalie | [Pair Journal]() | -/3
 
 ### Team Scoring
