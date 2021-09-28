@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from PIL import Image, ImageDraw
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import numpy
 
 # create a Flask instance
@@ -78,7 +79,8 @@ def Journals():
 
 @app.route('/rgb/')
 def rgb():
-    return render_template("rgb.html")
+    path = Path(app.root_path) / "static" / "img"
+    return render_template("rgb.html", images=image_data(path))
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greet():
