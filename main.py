@@ -76,9 +76,9 @@ def Journals():
     return render_template("Journals.html")
 
 
-#@app.route('/rgb', methods=["GET", "POST"])
-#def rgb():
-#    return render_template('rgb.html', colors=color_data())
+@app.route('/rgb/', methods=["GET", "POST"])
+def rgb():
+    return render_template("rgb.html", name="World")
 
 
 @app.route('/greet/', methods=['GET', 'POST'])
