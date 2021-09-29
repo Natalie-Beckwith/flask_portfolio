@@ -6,7 +6,6 @@ import numpy
 # create a Flask instance
 app = Flask(__name__)
 
-
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -76,12 +75,6 @@ def overview():
 def Journals():
     return render_template("Journals.html")
 
-
-@app.route('/rgb/')
-def rgb():
-    path = Path(app.root_path) / "static" / "img"
-    return render_template("rgb.html", images=image_data(path))
-
 @app.route('/greet/', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -92,16 +85,12 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(debug=True)
-
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
     return render_template('rgb.html', colors=color_data())
 
 
-def color_data(path="/static/", color_dict=None):  # path of blueprint run is default
+def color_data(path="static/img/", color_dict=None):  # path of blueprint run is default
     # prefill with label and file
     if color_dict is None:
         color_dict = [
@@ -133,8 +122,12 @@ def color_data(path="/static/", color_dict=None):  # path of blueprint run is de
     return color_dict
 
 
+# runs the application on the development server
 if __name__ == "__main__":
-    local_path = "static/"
+    app.run(debug=True)
+
+if __name__ == "__main__":
+    local_path = "static/img/"
     color_test = [
         {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
         {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-original.jpg"},
