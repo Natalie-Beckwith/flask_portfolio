@@ -87,8 +87,8 @@ def greet():
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template('rgb.html', colors=color_data())
-
+    path = Path(app.root_path) / "static" / "img"
+    return render_template('rgb.html', images=color_data(path))
 
 def color_data(path="static/img/", color_dict=None):  # path of blueprint run is default
     # prefill with label and file
@@ -104,7 +104,7 @@ def color_data(path="static/img/", color_dict=None):  # path of blueprint run is
         ]
     # calculate attributes of image
     for color in color_dict:
-        file = path + color['file']
+        file = path / color['file']  # file with path for local access (backend)        
         image_reference = Image.open(file)
         image_data = image_reference.getdata()
         color['format'] = image_reference.format
