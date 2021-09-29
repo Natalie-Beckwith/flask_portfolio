@@ -14,20 +14,20 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="text-center">RGB values within an Image</h1>
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a;">RGB values within an Image</h1>
 <div class="container">
     <div class="row justify-content-md-center">
         <table class="table">
             <thead>
             <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
+                <th style="background-color: #d6e0f9; color: #a66a7a;">Meta Data</th>
+                <th style="background-color: #d6e0f9; color: #a66a7a;">Image</th>
+                <th style="background-color: #d6e0f9; color: #a66a7a;">Data</th>
             </tr>
             </thead>
             <tbody>
             {% for image in images %}
-            <tr>
+            <tr style="background-color: #d6e0f9; color: #a66a7a;">
                 <td>
                     <div>{{image.label}}</div>
                     <div>{{image.source}}</div>
@@ -36,12 +36,12 @@
                     <div>{{image.size}}</div>
 
                 </td>
-                <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                <td style="background-color: #d6e0f9; color: #a66a7a;">
+                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}">
                     <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                     <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                 </td>
-                <td>
+                <td style="background-color: #d6e0f9; color: #a66a7a;">
                     <div class="overflow-auto" style="height: 256px">
                         <table class="table">
                             <thead>

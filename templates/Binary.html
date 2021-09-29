@@ -146,17 +146,17 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="text-center" style="background-color: white; color: #a66a7a">Binary Math with Conversions</h1>
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a">Binary Math with Conversions</h1>
 <div class="container">
     <div class="row justify-content-md-center">
         <form method="POST">
-        <label for="bitWidth"style="background-color: white; color: #a66a7a">&nbspEnter bit width: </label>
+        <label for="bitWidth"style="background-color: #d6e0f9; color: #a66a7a">&nbspEnter bit width: </label>
         <input type="text" id="bitWidth" name="bitWidth" value="{{ BITS }}">
         <input type="submit" value="Go">
         </form>
 
         <div class="col-8">
-            <table class="table" style="background-color: white; color: #a66a7a">
+            <table class="table" style="background-color: #d6e0f9; color: #a66a7a">
                 <tr id="table">
                     <th>Plus</th>
                     <th>Binary</th>
@@ -182,7 +182,7 @@
         </div>
 
         <div class="col-12">
-            <table class="table" style="background-color: white; color: #a66a7a">
+            <table class="table" style="background-color: #d6e0f9; color: #a66a7a">
                 <tr>
                     {% for i in range(BITS) %}
                     <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
