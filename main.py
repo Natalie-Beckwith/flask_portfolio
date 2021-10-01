@@ -90,6 +90,11 @@ def rgb():
     path = Path(app.root_path) / "static" / "img"
     return render_template('rgb.html', images=color_data(path))
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
 def color_data(path="static/img/", color_dict=None):  # path of blueprint run is default
     # prefill with label and file
     if color_dict is None:
