@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request
+from flask import render_template, request
 from __init__ import app
+#from algorithm.algorithm import algorithm_bp
+from starter.starter import app_starter
+
 
 # connects default URL to render index.html
 @app.route('/')
@@ -45,18 +48,6 @@ def Natalie():
             return render_template("Natalie.html", name=name)
     # starting and empty input default
     return render_template("Natalie.html", name="World")
-
-@app.route('/Binary/', methods=['GET', 'POST'])
-def Binary():
-    bitWidth = 8;
-    if request.form:
-        bitWidthText = request.form.get("bitWidth")
-        if len(bitWidthText) != 0:  # input field has content
-            bitWidth = int (bitWidthText)
-            return render_template("starter/templates/Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
-
-    # starting and empty input default
-    return render_template("starter/templates/Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app.route('/Wireframes/')
 def Wireframes():

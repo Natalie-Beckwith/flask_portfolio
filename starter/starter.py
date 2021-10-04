@@ -9,20 +9,16 @@ app_starter = Blueprint('starter', __name__,
                         static_url_path='assets')
 
 
-#@app_starter.route('/Binary/', methods=['GET', 'POST'])
-#def Binary():
-#    bitWidth = 8;
-#    if request.form:
-#        bitWidthText = request.form.get("bitWidth")
-#        if len(bitWidthText) != 0:  # input field has content
-#            bitWidth = int (bitWidthText)
-#            return render_template("starter/templates/Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
-
-@app_starter.route('/binary/')
-def binary():
-    return render_template("starter/binary.html")
+@app_starter.route('/Binary/', methods=['GET', 'POST'])
+def Binary():
+    bitWidth = 8;
+    if request.form:
+        bitWidthText = request.form.get("bitWidth")
+        if len(bitWidthText) != 0:  # input field has content
+            bitWidth = int (bitWidthText)
+            return render_template("starter/templates/Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app_starter.route('/rgb/')
 def rgb():
     path = Path(app_starter.root_path) / "static" / "img"
-    return render_template('starter/rgb.html', images=image_data(path))
+    return render_template('starter/templates/rgb.html', images=image_data(path))
