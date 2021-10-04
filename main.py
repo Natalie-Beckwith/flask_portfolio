@@ -1,10 +1,5 @@
 from flask import Flask, render_template, request
-from PIL import Image, ImageDraw
-from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-import numpy
-
-# create a Flask instance
-app = Flask(__name__)
+from __init__ import app
 
 # connects default URL to render index.html
 @app.route('/')
@@ -58,10 +53,10 @@ def Binary():
         bitWidthText = request.form.get("bitWidth")
         if len(bitWidthText) != 0:  # input field has content
             bitWidth = int (bitWidthText)
-            return render_template("Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+            return render_template("starter/templates/Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
     # starting and empty input default
-    return render_template("Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+    return render_template("starter/templates/Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app.route('/Wireframes/')
 def Wireframes():
@@ -85,48 +80,7 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
-@app.route('/rgb/', methods=["GET", "POST"])
-def rgb():
-    path = Path(app_starter.root_path) / "static" / "img"
-    return render_template('starter/rgb.html', images=image_data(path))
-
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('404.html'), 404
-
-def color_data(path="static/img/", color_dict=None):  # path of blueprint run is default
-    # prefill with label and file
-    if color_dict is None:
-        color_dict = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
-        ]
-    # calculate attributes of image
-    for color in color_dict:
-        file = path / color['file']  # file with path for local access (backend)        
-        image_reference = Image.open(file)
-        image_data = image_reference.getdata()
-        color['format'] = image_reference.format
-        color['mode'] = image_reference.mode
-        color['size'] = image_reference.size
-        color['data'] = numpy.array(image_data)
-        color['hex_array'] = []
-        color['binary_array'] = []
-        for code in color['data']:
-            hex_value = hex(code[0])[-2:] + hex(code[1])[-2:] + hex(code[2])[-2:]
-            hex_value = hex_value.replace("x", "0")
-            color['hex_array'].append("#" + hex_value)
-            bin_value = bin(int('1' + hex_value, 16))[3:]
-            color['binary_array'].append("0b" + bin_value)
-    return color_dict
-
-
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(debug=True)
