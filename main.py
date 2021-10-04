@@ -87,8 +87,8 @@ def greet():
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    path = Path(app.root_path) / "static" / "img"
-    return render_template('rgb.html', images=color_data(path))
+    path = Path(app_starter.root_path) / "static" / "img"
+    return render_template('starter/rgb.html', images=image_data(path))
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -130,26 +130,3 @@ def color_data(path="static/img/", color_dict=None):  # path of blueprint run is
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-
-if __name__ == "__main__":
-    local_path = "static/img/"
-    color_test = [
-        {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-        {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-original.jpg"},
-    ]
-    colors = color_data(local_path, color_test)  # path of local run
-    for row in colors:
-        # summarize some details about the image
-        print(row['label'])
-        print(row['format'])
-        print(row['mode'])
-        print(row['size'])
-        print(row['data'])
-        print(row['hex_array'])
-        print(row['binary_array'])
-        filename = local_path + row['file']
-        image_ref = Image.open(filename)
-        draw = ImageDraw.Draw(image_ref)
-        draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))
-        image_ref.show()
-print()
