@@ -22,3 +22,4 @@ def Binary():
 def rgb():
     path = Path(app_starter.root_path) / "static" / "img"
     return render_template('starter/templates/rgb.html', images=image_data(path))
+
