@@ -84,7 +84,7 @@ def greet():
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    path = Path(app.root_path) / "starter" / "static" / "img"
+    path = Path(app.root_path) / "static" / "img"
     return render_template('rgb.html', images=image_data(path))
 
 @app.errorhandler(404)
