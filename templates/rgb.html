@@ -9,7 +9,18 @@
         //  document.getElementID("img_gray<n>").innerHTML
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
 
-    function setImg(img, base64) {
+        function toggleImage() {
+            if (document.getElementById("button1").value == "Gray")
+            {
+                document.getElementById("Lassen Volcano").src = document.getElementById("img_gray1").innerHTML;
+                document.getElementById("button1").value = "Original";
+            }
+            else
+            {
+                document.getElementById("button1").value = "Gray";
+                document.getElementById("Lassen Volcano").src = document.getElementById("img_orig1").innerHTML;
+            }
+        }
         // add button and rotate image from original to gray and back (toggle)
         // document.getElementById(img). = base64;  //change img src to inner html on <p> tag
     }
@@ -47,8 +58,11 @@
                                {{image.base64}}  original image
                                {{image.base64_GRAY}}  gray scale image
                             -->
+
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                            <input type="button" id="button1" value="Gray" onclick="toggleImage()">
+
                         </td>
                         <td style="background-color: #d6e0f9; color: #a66a7a;">
                             <div class="overflow-auto" style="height: 256px">
