@@ -1,8 +1,7 @@
 from flask import render_template, request
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 from __init__ import app
-#from algorithm.algorithm import algorithm_bp
-from starter.starter import app_starter
-
+from algorithm.image import image_data
 
 # connects default URL to render index.html
 @app.route('/')
@@ -49,6 +48,18 @@ def Natalie():
     # starting and empty input default
     return render_template("Natalie.html", name="World")
 
+@app.route('/Binary/', methods=['GET', 'POST'])
+def Binary():
+    bitWidth = 8;
+    if request.form:
+        bitWidthText = request.form.get("bitWidth")
+        if len(bitWidthText) != 0:  # input field has content
+            bitWidth = int (bitWidthText)
+            return render_template("Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+
+    # starting and empty input default
+    return render_template("Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+
 @app.route('/Wireframes/')
 def Wireframes():
     return render_template("Wireframes.html")
@@ -70,6 +81,11 @@ def greet():
             return render_template("greet.html", name=name)
     # starting and empty input default
     return render_template("greet.html", name="World")
+
+@app.route('/rgb/', methods=["GET", "POST"])
+def rgb():
+    path = Path(app.root_path) / "starter" / "static" / "img"
+    return render_template('rgb.html', images=image_data(path))
 
 @app.errorhandler(404)
 def page_not_found(e):
