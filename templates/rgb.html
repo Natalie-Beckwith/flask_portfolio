@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% set project = "RGB" %}
+{% block body %}
 
-{% block meta %}
     <script>
+        {
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         //  document.getElementById("img<n>").src
         //  document.getElementID("img_gray<n>").innerHTML
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
 
         function toggleImage() {
-            if (document.getElementById("button1").value == "Gray")
+            if (document.getElementById("button1").value === "Gray")
             {
-                document.getElementById("Lassen Volcano").src = document.getElementById("img_gray1").innerHTML;
+                document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
+                document.getElementById("button1").value = "Original";
                 document.getElementById("button1").value = "Original";
             }
             else
             {
                 document.getElementById("button1").value = "Gray";
-                document.getElementById("Lassen Volcano").src = document.getElementById("img_orig1").innerHTML;
+                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
             }
         }
         // add button and rotate image from original to gray and back (toggle)
@@ -27,9 +29,7 @@
     </script>
 
     <title>RGB starter</title>
-{% endblock %}
 
-{% block body %}
 <h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a;">RGB values within an Image</h1>
     <div class="container">
         <div class="row justify-content-md-center">
@@ -76,7 +76,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256:+1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>
