@@ -4,28 +4,21 @@
 {% block body %}
 
     <script>
-        {
         // Hack: add java script function to toggle image from original to gray and back (toggle)
-        //  document.getElementById("img<n>").src
-        //  document.getElementID("img_gray<n>").innerHTML
-        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
 
         function toggleImage() {
-            if (document.getElementById("button1").value === "Gray")
-            {
+            if (document.getElementById("button1").value === "Gray") {
                 document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
+                document.getElementById("img2").src = document.getElementById("img_gray2").innerHTML;
+                document.getElementById("img3").src = document.getElementById("img_gray3").innerHTML;
+                document.getElementById("img4").src = document.getElementById("img_gray4").innerHTML;
+                document.getElementById("img5").src = document.getElementById("img_gray5").innerHTML;
                 document.getElementById("button1").value = "Original";
-                document.getElementById("button1").value = "Original";
-            }
-            else
-            {
-                document.getElementById("button1").value = "Gray";
+            } else {
                 document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
+                document.getElementById("button1").value = "Gray";
             }
         }
-        // add button and rotate image from original to gray and back (toggle)
-        // document.getElementById(img). = base64;  //change img src to inner html on <p> tag
-    }
     </script>
 
     <title>RGB starter</title>

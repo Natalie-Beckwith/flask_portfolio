@@ -21,13 +21,11 @@ def image_formatter(img, img_type):
 def image_data(path=Path("../starter/static/img/"), images=None):  # path of static images is defaulted
     if images is None:  # color_dict is defined with defaults
         images = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
+            {'source': "unknown", 'label': "8-Bit Black", 'file': "8bitblack.png"},
+            {'source': "artstation.com", 'label': "8-Bit Blue", 'file': "8bitblue.jpg"},
+            {'source': "unknown", 'label': "8-Bit Red", 'file': "8bitred.png"},
+            {'source': "unknown", 'label': "8-Bit Green", 'file': "8bitgreen.png"},
+            {'source': "unknown", 'label': "8-Bit White", 'file': "8bitwhite.png"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for image in images:
