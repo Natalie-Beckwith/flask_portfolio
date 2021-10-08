@@ -33,7 +33,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
   
 ## **Week 7**
 
-### RGB Group Work
+### Logic Gate Project
 Requirement | Evidence | Grade
 |--         |--        |--
 Finish RGB.html | [Scrum Board]() | -/2
