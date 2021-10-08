@@ -36,7 +36,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 ### Logic Gate Project
 Requirement | Evidence | Grade
 |--         |--        |--
-Add Logic Gate minilab | [Scrum Board]() | -/2
+Add Logic Gate minilab | [Scrum Board](https://github.com/deimie/flask_portfolio/projects/1) | -/2
   
 ### RGB Indiviudal Work
 Pair | Requirement | Evidence | Grade
@@ -62,7 +62,7 @@ Natalie \& Abby | Complete online quiz and journal corrections. | [Journal](http
 ### RGB Group Work
 Requirement | Evidence | Grade
 |--         |--        |--
-Finish RGB.html | [Scrum Board]() | -/2
+Finish RGB.html | [Scrum Board](https://github.com/deimie/flask_portfolio/projects/1) | -/2
   
 ### RGB Indiviudal Work
 Pair | Requirement | Evidence | Grade
