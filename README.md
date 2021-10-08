@@ -36,7 +36,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 ### Logic Gate Project
 Requirement | Evidence | Grade
 |--         |--        |--
-Finish RGB.html | [Scrum Board]() | -/2
+Add Logic Gate minilab | [Scrum Board]() | -/2
   
 ### RGB Indiviudal Work
 Pair | Requirement | Evidence | Grade
