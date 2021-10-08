@@ -24,7 +24,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 [Week 6](#week6)
 
-[Week 6](#week7)
+[Week 7](#week7)
 
 &nbsp;
 
