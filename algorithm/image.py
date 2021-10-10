@@ -52,7 +52,6 @@ def image_data(path=Path("../starter/static/img/"), images=None):  # path of sta
         image['hex_array'] = []
         image['binary_array'] = []
         image['gray_data'] = []
-
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in image['data']:
             # hexadecimal conversions
@@ -73,6 +72,7 @@ def image_data(path=Path("../starter/static/img/"), images=None):  # path of sta
         # Conversion of modified Image to Base64
         img_object.putdata(image['gray_data'])
         image['base64_GRAY'] = image_formatter(img_object, image['format'])
+
 
     # end for loop for images
     return images  # list is returned with all the attributes for each image in a dictionary

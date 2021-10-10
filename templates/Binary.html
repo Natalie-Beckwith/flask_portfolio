@@ -142,6 +142,68 @@
             }
         }
     }
+
+
+    function multiply(n)
+    {
+        let binary = getBits();
+        // convert to decimal and do math
+        let decimal = parseInt(binary, 2);
+        if (n > 0) {  // PLUS
+            decimal = MAX === decimal ? 0 : decimal *= n; // OVERFLOW or PLUS
+
+            // convert the result back to binary, using custom function
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            // update bits
+        }
+        for (let i = 0; i < binary.length; i++)
+        {
+            let digit = binary.substr(i, 1);
+            document.getElementById('digit' + i).value = digit;
+            if (digit === "1")
+            {
+                document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+            } else
+            {
+                document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+            }
+        }
+    }
+
+    function divide(n)
+    {
+        let binary = getBits();
+        // convert to decimal and do math
+        let decimal = parseInt(binary, 2);
+        if (n > 0) {  // PLUS
+            decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
+
+            // convert the result back to binary, using custom function
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            // update bits
+        }
+        for (let i = 0; i < binary.length; i++)
+        {
+            let digit = binary.substr(i, 1);
+            document.getElementById('digit' + i).value = digit;
+            if (digit === "1")
+            {
+                document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+            } else
+            {
+                document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+            }
+        }
+    }
+
 </script>
 {% endblock %}
 
@@ -158,6 +220,7 @@
         <div class="col-8">
             <table class="table" style="background-color: #d6e0f9; color: #a66a7a">
                 <tr id="table">
+                    <th>Shift Left</th>
                     <th>Plus</th>
                     <th>Binary</th>
                     <th>Octal</th>
@@ -166,8 +229,11 @@
                     <!-- Hack: display ASCII label for printable character(s)  -->
                     <th>ASCII</th>
                     <th>Minus</th>
+                    <th>Shift Right</th>
                 </tr>
                 <tr>
+                    <td><button type="button" id="shiftL" onclick="multiply(2)"><<</button></td>
+
                     <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                     <td id="binary">00000000</td>
                     <td id="octal">0</td>
@@ -176,6 +242,9 @@
                     <!-- Hack: display ASCII printable character(s)  -->
                     <td id="ascii">0</td>
                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+
+                    <td><button type="button" id="shiftR"  onclick="divide(2)">>></button></td>
+
 
                 </tr>
             </table>
