@@ -79,8 +79,6 @@
 	
     // set the values of each conversion to match value of bits
     function setConversions2(binary) {
-		console.log("setConversions2 " + binary);
-		
         let a = document.getElementById('binary2')
 		console.log("a= " + a)
 		a.innerHTML = binary;
@@ -99,9 +97,6 @@
         let ascii = utf16 & 127;
         let asciiText = String.fromCharCode(ascii);
         let utfText = String.fromCharCode(utf16);
-		console.log("setConversions2 " + ascii);
-		console.log("setConversions2 " + asciiText);
-		console.log("setConversions2 " + utfText);
 		
         document.getElementById('ascii2').innerHTML = asciiText;
         document.getElementById('utf-162').innerHTML = utfText;
@@ -384,6 +379,35 @@
         }
     }
 
+	function sAdd()
+	{
+        let binary1 = getBits();
+        let binary2 = getBits2();
+		
+        let decimal1 = parseInt(binary1, 2);
+        let decimal2 = parseInt(binary2, 2);
+		
+		let unsignedAdd = decimal1 + decimal2;
+		let unsignedAddStr = unsignedAdd.toString(10);
+				
+		document.getElementById('unsignedAdd').value = unsignedAddStr;
+		
+		const signMask = MAXMULTIPLY;
+		if(decimal1 & signMask)
+		{
+			decimal1 *= -1;
+		}
+		
+		if(decimal2 & signMask)
+		{
+			decimal2 *= -1;
+		}		
+		let signedAdd = decimal1 + decimal2;
+	 	let signedAddStr = signedAdd.toString(10);
+	
+		document.getElementById('signedAdd').value = signedAddStr;
+	}
+	
 
 </script>
 {% endblock %}
@@ -498,7 +522,21 @@
             </table>
         </div>
 		
-				
+		
+		<form
+            <label for="name">Signed Add</label>
+            <input name="Singed addition" id="signedAdd">
+			
+            <label for="name">UnSigned Add</label>
+            <input name="unsigned addition" id="unsignedAdd">
+            <input type="button" id="addGo" value="Add" onclick="sAdd()">
+
+<!--			
+            <input name="unsigned addition" id="unsignedAdd">
+            <input type="button" id="unsignedAddGo" value="Add" onclick="unsAdd()"> -->
+			
+
+		</form				
     </div>
 </div>
 {% endblock %}
