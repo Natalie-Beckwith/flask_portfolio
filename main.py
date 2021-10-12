@@ -97,6 +97,10 @@ def page_not_found(e):
 def logicGates():
     return render_template("logicGates.html")
 
+@app.route('/colorCodes/')
+def colorCodes():
+    return render_template("colorCodes.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 
