@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Color Codes" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Codes</title>
+</head>
+{% block body%}
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a">Color Codes</h1>
+
+<div class="row" style="text-align: center;"> <!-- This is the row of buttons for red bits-->
+    <div class="col-sm-1"></div>
+    <p>Red</p>
+    <button class="col-sm-1" id="red1" onclick="toggle('red1')">0</button>
+    <button class="col-sm-1" id="red2" onclick="toggle('red2')">0</button>
+    <button class="col-sm-1" id="red3" onclick="toggle('red3')">0</button>
+    <button class="col-sm-1" id="red4" onclick="toggle('red4')">0</button>
+    <button class="col-sm-1" id="red5" onclick="toggle('red5')">0</button>
+    <button class="col-sm-1" id="red6" onclick="toggle('red6')">0</button>
+    <button class="col-sm-1" id="red7" onclick="toggle('red7')">0</button>
+    <button class="col-sm-1" id="red8" onclick="toggle('red8')">0</button>
+
+<div class="col-sm-1">
+    <p id="red">Decimal Value: 0</p>
+</div>
+</div>
+
+<div class="row"> <!-- This is the row of buttons for green bits-->
+    <div class="col-sm-1"></div>
+    <p>Green</p>
+    <button class="col-sm-1" id="green1" onclick="toggle('green1')">0</button>
+    <button class="col-sm-1" id="green2" onclick="toggle('green2')">0</button>
+    <button class="col-sm-1" id="green3" onclick="toggle('green3')">0</button>
+    <button class="col-sm-1" id="green4" onclick="toggle('green4')">0</button>
+    <button class="col-sm-1" id="green5" onclick="toggle('green5')">0</button>
+    <button class="col-sm-1" id="green6" onclick="toggle('green6')">0</button>
+    <button class="col-sm-1" id="green7" onclick="toggle('green7')">0</button>
+    <button class="col-sm-1" id="green8" onclick="toggle('green8')">0</button>
+
+    <div class="col-sm-1">
+        <p id="green">Decimal Value: 0</p>
+    </div>
+</div>
+
+<div class="row"> <!-- This is the row of buttons for blue bits-->
+    <div class="col-sm-1"></div>
+    <p>Blue</p>
+    <button class="col-sm-1" id="blue1" onclick="toggle('blue1')">0</button>
+    <button class="col-sm-1" id="blue2" onclick="toggle('blue2')">0</button>
+    <button class="col-sm-1" id="blue3" onclick="toggle('blue3')">0</button>
+    <button class="col-sm-1" id="blue4" onclick="toggle('blue4')">0</button>
+    <button class="col-sm-1" id="blue5" onclick="toggle('blue5')">0</button>
+    <button class="col-sm-1" id="blue6" onclick="toggle('blue6')">0</button>
+    <button class="col-sm-1" id="blue7" onclick="toggle('blue7')">0</button>
+    <button class="col-sm-1" id="blue8" onclick="toggle('blue8')">0</button>
+
+    <div class="col-sm-1">
+        <p id="blue">Decimal Value: 0</p>
+    </div>
+</div>
+
+<div class="col-sm-10" id="color" style="background-color: #000000; height: 20vh;">  <!-- shows color -->
+</div>
+<p style="text-align: center; color: white" id="code">#000000</p>
+
+<script>
+    var red = 0;
+    var green = 0;
+    var blue = 0;
+
+    function toggle (id) {     // toggles button between on and off
+        const element = document.getElementById(id);
+        if (element.innerHTML == "1") {
+            element.innerHTML = "0";
+        } else {
+            element.innerHTML = "1";
+        }
+        element.classList.toggle("buttonOn");
+        element.classList.toggle("buttonOff");
+
+        calculateRow(id.charAt(0));
+    }
+
+    function calculateRow (color) {    // function that calculates the decimal value for a certain row after one of its buttons is toggled
+        let sum = 0;
+        for (var i = 1; i <= 8; i++) {
+            let element = document.getElementById(color + i);
+            sum += Math.pow(2, 8 - i) * parseInt(element.innerHTML);
+        }
+        document.getElementById(color).innerHTML = "Decimal Value: " + sum + "";
+        switch (color) {
+            case 'red':
+                red = sum;
+                break;
+            case 'green':
+                green = sum;
+                break;
+            case 'blue':
+                blue = sum;
+                break;
+            default:
+                break;
+        }
+        setColorCode();
+    }
+
+    function setColorCode () {    // creates color from values
+        let r = red.toString(16);
+        let g = green.toString(16);
+        let b = blue.toString(16);
+
+        if (r.length == 1) {
+            r = "0" + r;
+        }
+        if (g.length == 1) {
+            g = "0" + g;
+        }
+        if (b.length == 1) {
+            b = "0" + b;
+        }
+
+        let code = "#" + r + g + b;
+        document.getElementById("color").style.backgroundColor = code;
+        document.getElementById("code").innerHTML = "Hexcode: " + code;
+    }
+</script>
+
+
+{% endblock %}
+</html>

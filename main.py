@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-from algorithm.image import image_data
+from image import image_data
 
 app = Flask(__name__)
 
@@ -72,6 +72,10 @@ def overview():
 @app.route('/Journals/')
 def Journals():
     return render_template("Journals.html")
+
+@app.route('/colorCodes/')
+def colorCodes():
+    return render_template("colorCodes.html")
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greet():
