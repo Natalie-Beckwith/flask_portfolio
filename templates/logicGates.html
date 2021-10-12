@@ -9,9 +9,39 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function logic() {
+        var Atoggled = document.getElementById("A").checked
+        var Btoggled = document.getElementById("B").checked
+        if ( Atoggled && Btoggled ) {
+            document.getElementById("ANDoutput").innerHTML = "1";
+            document.getElementById("NANDoutput").innerHTML = "0";
+        } else {
+            document.getElementById("ANDoutput").innerHTML = "0";
+            document.getElementById("NANDoutput").innerHTML = "1";
+        }
+        if ( Atoggled || Btoggled ) {
+            document.getElementById("ORoutput").innerHTML = "1";
+            document.getElementById("NORoutput").innerHTML = "0";
+        } else {
+            document.getElementById("ORoutput").innerHTML = "0";
+            document.getElementById("NORoutput").innerHTML = "1";
+        }
+        if ( Atoggled ^ Btoggled ) {
+            document.getElementById("XORoutput").innerHTML = "1";
+            document.getElementById("XNORoutput").innerHTML = "0";
+        } else {
+            document.getElementById("XORoutput").innerHTML = "0";
+            document.getElementById("XNORoutput").innerHTML = "1";
+        }
+    }
+</script>
 <p style="font-size: 25px">1 is checked, 0 is unchecked</p>
-
-<table style="width:65%">
+<input type="checkbox" id="A" name="optionA" value="A" onclick="logic(this)">
+<label for="optionA">A</label>
+<input type="checkbox" id="B" name="optionB" value="B" onclick="logic(this)">
+<label for="optionA">B</label>
+<table style="width:65%;"class="center">
     <tr style="background-color: gray">
         <th>Icon</th>
         <th>Logic Gate</th>
@@ -20,37 +50,32 @@
     <tr style=" background-color: gray">
         <td><img src="https://www.pngkit.com/png/full/61-613823_and-gate-clip-art-gate-png.png" width="170" height="100"></td>
         <td>AND</td>
-        <td>y</td>
+        <td id="ANDoutput">0</td>
     </tr>
     <tr style=" background-color: gray">
         <td><img src="http://cdn.onlinewebfonts.com/svg/img_485268.png" width="170" height="100"></td>
         <td>NAND</td>
-        <td>y</td>
+        <td id="NANDoutput">1</td>
     </tr>
     <tr style=" background-color: gray">
         <td><img src="http://cdn.onlinewebfonts.com/svg/img_485272.png" width="170" height="100"></td>
         <td>OR</td>
-        <td>y</td>
+        <td id="ORoutput">0</td>
     </tr>
     <tr style=" background-color: gray">
         <td><img src="https://www.pngkey.com/png/full/61-613848_png-file-svg-nor-gate-png.png" width="170" height="100"></td>
         <td>NOR</td>
-        <td>y</td>
+        <td id="NORoutput">1</td>
     </tr>
     <tr style=" background-color: gray">
-        <td><img src="https://www.pngkit.com/png/full/61-613823_and-gate-clip-art-gate-png.png" width="170" height="100"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/1280px-XOR_ANSI.svg.png" width="190" height="100"></td>
         <td>XOR</td>
-        <td>y</td>
+        <td id="XORoutput">0</td>
     </tr>
     <tr style=" background-color: gray">
-        <td><img src="https://www.pngkit.com/png/full/61-613823_and-gate-clip-art-gate-png.png" width="170" height="100"></td>
-        <td>NOT</td>
-        <td>y</td>
-    </tr>
-    <tr style=" background-color: gray">
-        <td><img src="https://www.pngkit.com/png/full/61-613823_and-gate-clip-art-gate-png.png" width="170" height="100"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/1280px-XNOR_ANSI.svg.png" width="170" height="100"></td>
         <td>XNOR</td>
-        <td>y</td>
+        <td id="XNORoutput">0</td>
     </tr>
 </table>
 
