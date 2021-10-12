@@ -60,11 +60,13 @@
          DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
          below ASCII for more ideas of where to make changes
          */
-        binDec = parseInt(binary, 2);
+        utf16 = parseInt(binary, 2);
         // cut ascii at 7 bits
-        let ascii = binDec & 127;
-        let text = String.fromCharCode(ascii);
-        document.getElementById('ascii').innerHTML = text;
+        let ascii = utf16 & 127;
+        let asciiText = String.fromCharCode(ascii);
+        let utfText = String.fromCharCode(utf16);
+        document.getElementById('ascii').innerHTML = asciiText;
+        document.getElementById('utf-16').innerHTML = utfText;
     }
 
     /* This function converts decimal number to selected base using decimal, base, quotient, remainder.
@@ -245,6 +247,7 @@
                     <th>Decimal</th>
                     <!-- Hack: display ASCII label for printable character(s)  -->
                     <th>ASCII</th>
+                    <th>UTF-16</th>
                     <th>Minus</th>
                     <th>Shift Right</th>
                 </tr>
@@ -258,6 +261,7 @@
                     <td id="decimal">0</td>
                     <!-- Hack: display ASCII printable character(s)  -->
                     <td id="ascii">0</td>
+                    <td id="utf-16">0</td>
                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
                     <td><button type="button" id="shiftR"  onclick="divide(2)">>></button></td>
