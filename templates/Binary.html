@@ -24,6 +24,7 @@
     // Global variables for Javascript sequence of code in <script> tags
 
     let BITS = {{ BITS }}; // number of BITS (or Bulbs) displayed on screen
+    let MAXMULTIPLY = 2 ** {{BITS - 1 }};
     let max = ((2 ** BITS) - 1);
     let MAX = parseInt(max, 10);  // MAX integer value of bits
     let imgBulbOn = "{{imgBulbOn}}";
@@ -149,6 +150,12 @@
         let binary = getBits();
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
+
+        // quit if the number is too big
+        if(decimal >= MAXMULTIPLY)
+        {
+            return;
+        }
         if (n > 0) {  // PLUS
             decimal = MAX === decimal ? 0 : decimal *= n; // OVERFLOW or PLUS
 
@@ -179,6 +186,13 @@
         let binary = getBits();
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
+
+        // clear last bit if set (number is odd)
+        if ((decimal % 2) == 1)
+        {
+            decimal &= ~(1);
+        }
+
         if (n > 0) {  // PLUS
             decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
 
