@@ -9,55 +9,61 @@
 </head>
 {% block body%}
 <h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a">Color Codes</h1>
+<style>
+
+    button{
+        height:100%
+    }
+</style>
 
 <div class="row" style="text-align: center;"> <!-- This is the row of buttons for red bits-->
     <div class="col-sm-1"></div>
     <p>Red</p>
-    <button class="col-sm-1" id="red1" onclick="toggle('red1')">0</button>
-    <button class="col-sm-1" id="red2" onclick="toggle('red2')">0</button>
-    <button class="col-sm-1" id="red3" onclick="toggle('red3')">0</button>
-    <button class="col-sm-1" id="red4" onclick="toggle('red4')">0</button>
-    <button class="col-sm-1" id="red5" onclick="toggle('red5')">0</button>
-    <button class="col-sm-1" id="red6" onclick="toggle('red6')">0</button>
-    <button class="col-sm-1" id="red7" onclick="toggle('red7')">0</button>
-    <button class="col-sm-1" id="red8" onclick="toggle('red8')">0</button>
+    <button class="col-sm-1" id="r1" onclick="toggleSwitch('r1')">0</button>
+    <button class="col-sm-1" id="r2" onclick="toggleSwitch('r2')">0</button>
+    <button class="col-sm-1" id="r3" onclick="toggleSwitch('r3')">0</button>
+    <button class="col-sm-1" id="r4" onclick="toggleSwitch('r4')">0</button>
+    <button class="col-sm-1" id="r5" onclick="toggleSwitch('r5')">0</button>
+    <button class="col-sm-1" id="r6" onclick="toggleSwitch('r6')">0</button>
+    <button class="col-sm-1" id="r7" onclick="toggleSwitch('r7')">0</button>
+    <button class="col-sm-1" id="r8" onclick="toggleSwitch('r8')">0</button>
 
 <div class="col-sm-1">
-    <p id="red">Decimal Value: 0</p>
+    <p id="r">Decimal Value: 0</p>
 </div>
 </div>
 
 <div class="row"> <!-- This is the row of buttons for green bits-->
     <div class="col-sm-1"></div>
     <p>Green</p>
-    <button class="col-sm-1" id="green1" onclick="toggle('green1')">0</button>
-    <button class="col-sm-1" id="green2" onclick="toggle('green2')">0</button>
-    <button class="col-sm-1" id="green3" onclick="toggle('green3')">0</button>
-    <button class="col-sm-1" id="green4" onclick="toggle('green4')">0</button>
-    <button class="col-sm-1" id="green5" onclick="toggle('green5')">0</button>
-    <button class="col-sm-1" id="green6" onclick="toggle('green6')">0</button>
-    <button class="col-sm-1" id="green7" onclick="toggle('green7')">0</button>
-    <button class="col-sm-1" id="green8" onclick="toggle('green8')">0</button>
+    <button class="col-sm-1" id="g1" onclick="toggleSwitch('g1')">0</button>
+    <button class="col-sm-1" id="g2" onclick="toggleSwitch('g2')">0</button>
+    <button class="col-sm-1" id="g3" onclick="toggleSwitch('g3')">0</button>
+    <button class="col-sm-1" id="g4" onclick="toggleSwitch('g4')">0</button>
+    <button class="col-sm-1" id="g5" onclick="toggleSwitch('g5')">0</button>
+    <button class="col-sm-1" id="g6" onclick="toggleSwitch('g6')">0</button>
+    <button class="col-sm-1" id="g7" onclick="toggleSwitch('g7')">0</button>
+    <button class="col-sm-1" id="g8" onclick="toggleSwitch('g8')">0</button>
 
     <div class="col-sm-1">
-        <p id="green">Decimal Value: 0</p>
+        <p id="g">Decimal Value: 0</p>
     </div>
 </div>
 
 <div class="row"> <!-- This is the row of buttons for blue bits-->
     <div class="col-sm-1"></div>
     <p>Blue</p>
-    <button class="col-sm-1" id="blue1" onclick="toggle('blue1')">0</button>
-    <button class="col-sm-1" id="blue2" onclick="toggle('blue2')">0</button>
-    <button class="col-sm-1" id="blue3" onclick="toggle('blue3')">0</button>
-    <button class="col-sm-1" id="blue4" onclick="toggle('blue4')">0</button>
-    <button class="col-sm-1" id="blue5" onclick="toggle('blue5')">0</button>
-    <button class="col-sm-1" id="blue6" onclick="toggle('blue6')">0</button>
-    <button class="col-sm-1" id="blue7" onclick="toggle('blue7')">0</button>
-    <button class="col-sm-1" id="blue8" onclick="toggle('blue8')">0</button>
+    <button class="col-sm-1" id="b1" onclick="toggleSwitch('b1')">0</button>
+    <button class="col-sm-1" id="b2" onclick="toggleSwitch('b2')">0</button>
+    <button class="col-sm-1" id="b3" onclick="toggleSwitch('b3')">0</button>
+    <button class="col-sm-1" id="b4" onclick="toggleSwitch('b4')">0</button>
+    <button class="col-sm-1" id="b5" onclick="toggleSwitch('b5')">0</button>
+    <button class="col-sm-1" id="b6" onclick="toggleSwitch('b6')">0</button>
+    <button class="col-sm-1" id="b7" onclick="toggleSwitch('b7')">0</button>
+    <button class="col-sm-1" id="b8" onclick="toggleSwitch('b8')">0</button>
 
     <div class="col-sm-1">
-        <p id="blue">Decimal Value: 0</p>
+        <p id="b">Decimal Value: 0</p>
     </div>
 </div>
 
@@ -70,7 +76,7 @@
     var green = 0;
     var blue = 0;
 
-    function toggle (id) {     // toggles button between on and off
+    function toggleSwitch (id) {     // toggles button between on and off
         const element = document.getElementById(id);
         if (element.innerHTML == "1") {
             element.innerHTML = "0";
@@ -91,13 +97,13 @@
         }
         document.getElementById(color).innerHTML = "Decimal Value: " + sum + "";
         switch (color) {
-            case 'red':
+            case 'r':
                 red = sum;
                 break;
-            case 'green':
+            case 'g':
                 green = sum;
                 break;
-            case 'blue':
+            case 'b':
                 blue = sum;
                 break;
             default:
