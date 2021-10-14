@@ -33,16 +33,15 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
   
 ## **Week 7**
 
-### Logic Gate Project
+### Team Scoring
 Requirement | Evidence | Grade
 |--         |--        |--
-Add Logic Gate minilab | [Scrum Board](https://github.com/deimie/flask_portfolio/projects/1) | -/2
-  
-### RGB Indiviudal Work
-Pair | Requirement | Evidence | Grade
-|--  |--       |--        |--
-Evan \& Hassan | Finish RGB.html | [Ticket]() | -/1
-Natalie \& Abby | Finish RGB.html | [Ticket]() | -/1
+Logic Gate minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/37) | 1/1
+Color Codes minlab | [Ticket](https://github.com/deimie/flask_portfolio/issues/39) | .25/1
+Signed Addition minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/38) | 0/1
+Unsigned Addition minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/46) | 0/1
+Binary Shift minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/40) | 1/1
+Unicode minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/41) | 1/1
 
 ### TPT Scoring
 Pair | Requirement | Journal | Grade
