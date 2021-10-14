@@ -127,9 +127,9 @@
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
-            decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+            decimal = MAX === decimal ? 0 : decimal + n; // OVERFLOW or PLUS
         } else  {     // MINUS
-            decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
+            decimal = 0 === decimal ? MAX : decimal + n; // OVERFLOW or MINUS
         }
         // convert the result back to binary, using custom function
         binary = decimal_2_base(decimal, 2);
@@ -287,6 +287,11 @@
                 </tr>
             </table>
         </div>
+
+        <label for="bitWidth"style="background-color: #d6e0f9; color: #a66a7a">Enter integer to add: </label>
+        <input type="text" id="addInt" name="addInt">
+        <button type="button" id="addintbtn" onclick="add(parseInt(document.getElementById('addInt').value))">Add</button>
+
     </div>
 </div>
 {% endblock %}
