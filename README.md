@@ -46,8 +46,8 @@ Unicode minilab | [Ticket](https://github.com/deimie/flask_portfolio/issues/41) 
 ### TPT Scoring
 Pair | Requirement | Journal | Grade
 |--  |--           |--       |--
-Evan \& Hassan | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit) | -/2
-Natalie \& Abby | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit?usp=sharing) | -/2
+Evan \& Hassan | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/1lY6ZoeMfg7GHjVEbM-qHiPVAQTNDXcFxE25Ix97pics/edit) | 2/2
+Natalie \& Abby | Complete online quiz and journal corrections. | [Journal](https://docs.google.com/document/d/15J9ONJoY1US4ot0MxrlTNP8nl32z9Zaq6pVNKlNhks8/edit?usp=sharing) | 2/2
 
 
 &nbsp;
