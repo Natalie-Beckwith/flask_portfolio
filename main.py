@@ -4,7 +4,7 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 
 app = Flask(__name__)
 
-# connects default URL to render index.html
+# connects default URL to render index.html`
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -97,6 +97,10 @@ def page_not_found(e):
 @app.route('/logicGates/')
 def logicGates():
     return render_template("logicGates.html")
+
+@app.route('/map/')
+def map():
+    return render_template("map.html")
 
 @app.route('/colorCodes/')
 def colorCodes():
