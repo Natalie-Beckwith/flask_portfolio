@@ -1,10 +1,10 @@
-import requests
+#import requests
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 app = Flask(__name__)
 
-# connects default URL to render index.html
+# connects default URL to render index.html`
 @app.route('/')
 def index():
     return render_template("index.html")
