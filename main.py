@@ -98,6 +98,10 @@ def page_not_found(e):
 def logicGates():
     return render_template("logicGates.html")
 
+@app.route('/map/')
+def map():
+    return render_template("map.html")
+
 @app.route('/colorCodes/')
 def colorCodes():
     return render_template("colorCodes.html")
