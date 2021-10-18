@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends "layouts/base.html" %}
+
+{% set project = "Map" %}
+
+{% block body %}
 <body>
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a">Interactive Del Norte Map</h1>
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+<img src="/static/img/delNorteMap.png" class="center"> <!-- This image needs to be replaced with a better one soon -->
 
 </body>
-</html>
+{% endblock %}
