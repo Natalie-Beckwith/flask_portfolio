@@ -26,6 +26,24 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 [Week 7](#week7)
 
+[Week 8](#week8)
+
+
+&nbsp;
+
+
+<a name="week8"></a>
+
+## **Week 8**
+
+### Team Scoring
+Requirement | Evidence | Grade
+|--         |--        |--
+| Finish About Pages | [Ticket](https://github.com/deimie/flask_portfolio/issues/37) | -/-
+| Import a map and create a page for the main concept | [Ticket](https://github.com/deimie/flask_portfolio/issues/37) | -/-
+| Work on wireframes for this week | [Ticket](https://github.com/deimie/flask_portfolio/issues/37) | -/-
+| Use javascript to implement all the buildings and what will happen when they are clicked | [Ticket](https://github.com/deimie/flask_portfolio/issues/37) | -/-
+
 &nbsp;
 
 
