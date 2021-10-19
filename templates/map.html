@@ -4,17 +4,44 @@
 {% set project = "Map" %}
 
 {% block body %}
+
+<script>
+    function stadium()
+    {
+        console.log("clicked")
+    }
+
+
+</script>
+
+
+
+
 <body>
-<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a">Interactive Del Norte Map</h1>
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a;">Interactive Del Norte Map</h1>
 
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+<!-- This image needs to be replaced with a better one soon -->
+<!--<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/img/delNorteMap.png" alt="Stadium" usemap="#workmap">
 
-}
+<img src="/static/img/delNorteMap.png" class="center" alt="Workplace" usemap="#workmap" width="400" height="379">
 
-<img src="/static/img/delNorteMap.png" class="center"> <!-- This image needs to be replaced with a better one soon -->
+<map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+-->
+
+
+<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/img/delNorteMap.png" class="center" alt="Workplace" usemap="#workmap" width="588" height="501">
+
+
+<!-- remember for each coordinate, subtract x-150 and y-330 -->
+<map name="workmap">
+    <area shape="rect" coords="0,150,180,400" alt="Computer" href="/static/img/dnfh.jpg" onclick="stadium()">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
 
 </body>
 {% endblock %}
