@@ -1,4 +1,4 @@
-#import requests
+import requests
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
@@ -127,17 +127,10 @@ def jokes():
     response = requests.request("GET", url)
     return render_template("starter/jokes.html", jokes=response.json())
 
+@app.route('/geolocation/')
+def geolocation():
+    return render_template("geolocation.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-@app.route('/weatherAPI', methods=['GET', 'POST'])
-def weatherAPI():
-    url = "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode"
-
-querystring = {"zip":"94111"}
-headers = {
-    'x-rapidapi-host': "us-weather-by-zip-code.p.rapidapi.com",
-    'x-rapidapi-key': "SIGN-UP-FOR-KEY"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
+#anything after this line will not work
