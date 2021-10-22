@@ -129,3 +129,15 @@ def jokes():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route('/weatherAPI', methods=['GET', 'POST'])
+def weatherAPI():
+    url = "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode"
+
+querystring = {"zip":"94111"}
+headers = {
+    'x-rapidapi-host': "us-weather-by-zip-code.p.rapidapi.com",
+    'x-rapidapi-key': "SIGN-UP-FOR-KEY"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
