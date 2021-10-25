@@ -41,7 +41,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 Name | Link
 |--  |--
 Evan | [Video](https://youtu.be/S95Rd5mv8eo)
-Hassan | [Video]()
+Hassan | [Video](https://youtu.be/zUz4IQ1-jZ4)
 Abby | [Video]()
 Natalie | [Video]()
 
