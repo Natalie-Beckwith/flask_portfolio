@@ -28,6 +28,22 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 
 [Week 8](#week8)
 
+[Week 9](#week9)
+
+
+&nbsp;
+
+<a name="week9"></a>
+
+## **Week 9**
+
+### Video Submissions
+Name | Link
+|--  |--
+Evan | [Video]()
+Hassan | [Video]()
+Abby | [Video]()
+Natalie | [Video]()
 
 &nbsp;
 
