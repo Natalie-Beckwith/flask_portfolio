@@ -1,4 +1,3 @@
-import requests
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
@@ -97,6 +96,10 @@ def page_not_found(e):
 @app.route('/logicGates/')
 def logicGates():
     return render_template("logicGates.html")
+
+@app.route('/tempconditionals/')
+def tempconditionals():
+    return render_template("tempconditionals.html")
 
 @app.route('/map/')
 def map():

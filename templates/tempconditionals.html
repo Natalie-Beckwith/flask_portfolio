@@ -1,0 +1,33 @@
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "tempconditionals" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<div class="main">
+    <h1>Is the temperature good outside? (F)</h1>
+    <input id="tempinput">
+    <button onclick="A()">Enter</button>
+    <p id="output"></p>
+</div>
+
+<script>
+    function A(){
+        let answer
+        let temperature = document.getElementById("tempinput").value;
+        if(temperature >= 80){
+            answer = "It is too hot outside!"
+            document.getElementById("output").innerHTML = answer
+        } else if(temperature <= 68){
+            answer = "It is too cold outside!"
+            document.getElementById("output").innerHTML = answer
+        } else{
+            answer = "It is perfect outside!"
+            document.getElementById("output").innerHTML = answer
+        }
+    }
+</script>
+{% endblock %}
