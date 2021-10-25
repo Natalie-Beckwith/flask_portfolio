@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "layouts/base.html" %}
+
+{% set project = "temp" %}
+
+{% block body %}
+
+    <div class="main" style="text-align: center; margin:auto; width:50%;">
+        <h1> HTML and Conditionals Showcase </h1>
+        <input type="input" id="box1">
+        <button type="button" onclick="function1()"> Go </button>
+        <p id="answer">&nbsp</p>
+    </div>
+
+<script>
+    function function1() { //Checks if input number is even, odd, or not a valid integer.
+        let value
+        let num = document.getElementById("box1").value;
+
+        if (num % 1 == 0) {
+            if (num % 2 == 0) {
+                value = "even"
+                document.getElementById("answer").innerHTML = "Your number is " + value
+            } else {
+                value = "odd"
+                document.getElementById("answer").innerHTML = "Your number is " + value
+            }
+        } else {
+            document.getElementById("answer").innerHTML = "This input is not an integer"
+        }
+        if (num % 2 === 0 || num % 2 === 1){
+            alert("num is int")
+
+        } else {
+            alert("num is not int")
+        }
+    }
+
+
+</script>
+
+{% endblock %}
+</html>

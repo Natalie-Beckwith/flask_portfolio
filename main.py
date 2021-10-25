@@ -131,6 +131,10 @@ def jokes():
 def geolocation():
     return render_template("geolocation.html")
 
+@app.route('/temp/')
+def temp():
+    return render_template("temp.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 #anything after this line will not work
