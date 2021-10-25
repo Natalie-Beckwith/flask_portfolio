@@ -40,7 +40,7 @@ Abby | [@abigail-peltz](https://github.com/Abigail-Peltz) | [Tickets](https://gi
 ### Video Submissions
 Name | Link
 |--  |--
-Evan | [Video]()
+Evan | [Video](https://youtu.be/S95Rd5mv8eo)
 Hassan | [Video]()
 Abby | [Video]()
 Natalie | [Video]()
