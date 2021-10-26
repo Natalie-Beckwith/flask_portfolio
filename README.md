@@ -43,7 +43,7 @@ Name | Link
 Evan | [Video](https://youtu.be/S95Rd5mv8eo)
 Hassan | [Video](https://youtu.be/zUz4IQ1-jZ4)
 Abby | [Video]()
-Natalie | [Video]()
+Natalie | [Video](https://drive.google.com/file/d/1MpjEVQpNM0x_mOLIMwo3ZGWPXaHPemji/view)
 
 &nbsp;
 
