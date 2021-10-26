@@ -105,6 +105,11 @@ def tempconditionals():
 def map():
     return render_template("map.html")
 
+@app.route('/covidapi/')
+def covidapi():
+    return render_template("covidapi.html")
+
+
 @app.route('/colorCodes/')
 def colorCodes():
     return render_template("colorCodes.html")
