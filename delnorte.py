@@ -73,6 +73,10 @@ def quad():
 def stadium():
     return render_template("stadium.html")
 
-@app.route('tennis')
+@app.route('/dnhsMapBuildings/tennis')
 def tennis():
-    return render_template("tennis.html")
+    return render_template("/dnhsMapBuildings/tennis.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+#anything after this line will not work

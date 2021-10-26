@@ -136,7 +136,7 @@ def jokes():
     response = requests.request("GET", url)
     return render_template("starter/jokes.html", jokes=response.json())
 
-@app.route('/geolocation/')
+@app.route('/geolocation')
 def geolocation():
     return render_template("geolocation.html")
 
