@@ -20,7 +20,6 @@
 <title>Binary page</title>
 <script>
     /* Below are JavaScript functions or Code Blocks */
-
     // Global variables for Javascript sequence of code in <script> tags
 
     let BITS = {{ BITS }}; // number of BITS (or Bulbs) displayed on screen
@@ -32,8 +31,7 @@
 
     /* This function reads digit<n> variables and creates a string of bits
         parameter: <none>
-        returns: <string>, the current value of each bit (ie "1010001")
-     */
+        returns: <string>, the current value of each bit (ie "1010001") */
     // get the binary string using values of bits
     function getBits() {
         let bits = "";
@@ -42,11 +40,9 @@
         }
         return bits;
     }
-
     /* This function sets or resets (setter function) the DOM values (conversions) from binary string.
          parameter: <binary>, the current value of each bit (ie "1010001")
-         returns: <none>
-    */
+         returns: <none> */
     // set the values of each conversion to match value of bits
     function setConversions(binary) {
         document.getElementById('binary').innerHTML = binary;
