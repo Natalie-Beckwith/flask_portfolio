@@ -88,8 +88,8 @@
 
         calculateRow(id.charAt(0));
     }
-
-    function calculateRow (color) {    // function that calculates the decimal value for a certain row after one of its buttons is toggled
+    // function that calculates the decimal value for a certain row after one of its buttons is toggled
+    function calculateRow (color) {
         let sum = 0;
         for (let i = 1; i <= 8; i++) {
             let element = document.getElementById(color + i);

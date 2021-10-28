@@ -15,9 +15,9 @@ def Hassan():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Hassan.html", name=name)
+            return render_template("About Us/Hassan.html", name=name)
     # starting and empty input default
-    return render_template("Hassan.html", name="User")
+    return render_template("About Us/Hassan.html", name="User")
 
 @app.route('/Evan/', methods=['GET', 'POST'])
 def Evan():
@@ -25,9 +25,9 @@ def Evan():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Evan.html", name=name)
+            return render_template("About Us/Evan.html", name=name)
     # starting and empty input default
-    return render_template("Evan.html", name="User")
+    return render_template("About Us/Evan.html", name="User")
 
 @app.route('/Abby/', methods=['GET', 'POST'])
 def Abby():
@@ -35,9 +35,9 @@ def Abby():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Abby.html", name=name)
+            return render_template("About Us/Abby.html", name=name)
     # starting and empty input default
-    return render_template("Abby.html", name="User")
+    return render_template("About Us/Abby.html", name="User")
 
 @app.route('/Natalie/', methods=['GET', 'POST'])
 def Natalie():
@@ -45,9 +45,9 @@ def Natalie():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Natalie.html", name=name)
+            return render_template("About Us/Natalie.html", name=name)
     # starting and empty input default
-    return render_template("Natalie.html", name="World")
+    return render_template("About Us/Natalie.html", name="World")
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
@@ -56,14 +56,14 @@ def Binary():
         bitWidthText = request.form.get("bitWidth")
         if len(bitWidthText) != 0:  # input field has content
             bitWidth = int (bitWidthText)
-            return render_template("Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+            return render_template("Minilabs/Binary.html", BITS=bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
     # starting and empty input default
-    return render_template("Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
+    return render_template("Minilabs/Binary.html", BITS= bitWidth, imgBulbOn="/static/assets/bulbon.png", imgBulbOff="/static/assets/bulboff.png")
 
 @app.route('/Wireframes/')
 def Wireframes():
-    return render_template("Wireframes.html")
+    return render_template("Minilabs/Wireframes.html")
 
 @app.route('/overview/')
 def overview():
@@ -71,7 +71,7 @@ def overview():
 
 @app.route('/Journals/')
 def Journals():
-    return render_template("Journals.html")
+    return render_template("Minilabs/Journals.html")
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greet():
@@ -79,15 +79,15 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
+            return render_template("Minilabs/greet.html", name=name)
     # starting and empty input default
-    return render_template("greet.html", name="World")
+    return render_template("Minilabs/greet.html", name="World")
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
     path = Path(app.root_path) / "static" / "img"
     from algorithm.image import image_data
-    return render_template('rgb.html', images=image_data(path))
+    return render_template('Minilabs/rgb.html', images=image_data(path))
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -96,24 +96,24 @@ def page_not_found(e):
 
 @app.route('/logicGates/')
 def logicGates():
-    return render_template("logicGates.html")
+    return render_template("Minilabs/logicGates.html")
 
 @app.route('/tempconditionals/')
 def tempconditionals():
-    return render_template("tempconditionals.html")
+    return render_template("Projects/tempconditionals.html")
 
 @app.route('/map/')
 def map():
-    return render_template("map.html")
+    return render_template("Projects/map.html")
 
 @app.route('/covidapi/')
 def covidapi():
-    return render_template("covidapi.html")
+    return render_template("API/covidapi.html")
 
 
 @app.route('/colorCodes/')
 def colorCodes():
-    return render_template("colorCodes.html")
+    return render_template("Minilabs/colorCodes.html")
 
 @app.route('/joke', methods=['GET', 'POST'])
 def joke():
@@ -123,7 +123,7 @@ def joke():
     """
     url = "https://csp.nighthawkcodingsociety.com/api/joke"
     response = requests.request("GET", url)
-    return render_template("joke.html", joke=response.json())
+    return render_template("API/joke.html", joke=response.json())
 
 @app.route('/jokes', methods=['GET', 'POST'])
 def jokes():
@@ -134,15 +134,15 @@ def jokes():
     url = "https://csp.nighthawkcodingsociety.com/api/jokes"
 
     response = requests.request("GET", url)
-    return render_template("starter/jokes.html", jokes=response.json())
+    return render_template("API/starter/jokes.html", jokes=response.json())
 
 @app.route('/geolocation')
 def geolocation():
-    return render_template("geolocation.html")
+    return render_template("API/geolocation.html")
 
 @app.route('/temp/')
 def temp():
-    return render_template("temp.html")
+    return render_template("Projects/temp.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

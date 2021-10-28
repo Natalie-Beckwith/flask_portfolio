@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% set project = "Map" %}
+
+{% block body %}
+
+<script>
+    function stadium()
+    {
+        console.log("clicked")
+    }
+
+
+</script>
+
+
+
+
+<body>
+<h1 class="text-center" style="background-color: #d6e0f9; color: #a66a7a;">Interactive Del Norte Map</h1>
+
+<!-- This image needs to be replaced with a better one soon -->
+
+<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/img/delNorteMap.png" class="center" alt="Workplace" usemap="#dnhsmap" width="588" height="501">
+
+<!-- remember for each coordinate, subtract x and y by whatever the top left corner coordinate is -->
+<map name="dnhsmap">
+    <area shape="rect" coords="10,200,160,380" alt="Stadium" href="">
+    <area shape="rect" coords="154,365,257,292" alt="Tennis" href="/templates/dnhsMapBuildings/tennis.html">
+    <area shape="rect" coords="300,444,387,392" alt="Basketball" href="/static/dnhs/dnfh.jpg">
+    <area shape="circle" coords="410,217,45," alt="Quad" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="324,160,364,190" alt="Library" href="/static/dnhs/dnhslibrary.jpg">
+    <area shape="rect" coords="302,184,363,216" alt="Admin" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="312,222,377,277" alt="Food Service and Food Court" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="220,400,332,347" alt="Pool, Lockers, and Aquatic Office" href="/static/dnhs/dnfh.jpg">
+
+    <area shape="rect" coords="333,120,418,165" alt="A Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="418,65,452,109" alt="P Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="446,100,483,140" alt="N Building/PAC" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="499,100,524,150" alt="M Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="459,160,531,190" alt="L Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="494,199,541,227" alt="K Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="464,224,534,270" alt="J Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="437,272,502,312" alt="G Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="480,330,524,359" alt="R Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="430,306,464,339" alt="E Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="389,278,420,352" alt="D Building" href="/static/dnhs/dnfh.jpg">
+    <area shape="rect" coords="309,290,364,340" alt="B Building/Gym" href="https://www.littleonline.com/uploads/project_media/del-norte-high-school/del-norte-hs-03.jpg">
+
+    <area shape="rect" coords=",,," alt="" href="/static/dnhs/dnfh.jpg">
+
+
+
+
+</map>
+
+</body>
+{% endblock %}
