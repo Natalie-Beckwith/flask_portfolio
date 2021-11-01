@@ -136,13 +136,89 @@ def jokes():
     response = requests.request("GET", url)
     return render_template("API/starter/jokes.html", jokes=response.json())
 
-@app.route('/geolocation')
+@app.route('/geolocation/')
 def geolocation():
     return render_template("API/geolocation.html")
 
 @app.route('/temp/')
 def temp():
     return render_template("Projects/temp.html")
+
+@app.route('/dnhsMapBuildings/admin')
+def admin():
+    return render_template("/dnhsMapBuildings/admin.html")
+
+@app.route('/dnhsMapBuildings/basketball')
+def basketball():
+    return render_template("/dnhsMapBuildings/basketball.html")
+
+@app.route('/dnhsMapBuildings/buildingA')
+def buildingA():
+    return render_template("/dnhsMapBuildings/buildingA.html")
+
+@app.route('/dnhsMapBuildings/buildingBGym')
+def buildingBGym():
+    return render_template("/dnhsMapBuildings/buildingBGym.html")
+
+@app.route('/dnhsMapBuildings/buildingD')
+def buildingD():
+    return render_template("/dnhsMapBuildings/buildingD.html")
+
+@app.route('/dnhsMapBuildings/buildingE')
+def buildingE():
+    return render_template("/dnhsMapBuildings/buildingE.html")
+
+@app.route('/dnhsMapBuildings/buildingG')
+def buildingG():
+    return render_template("/dnhsMapBuildings/buildingG.html")
+
+@app.route('/dnhsMapBuildings/buildingJ')
+def buildingJ():
+    return render_template("/dnhsMapBuildings/buildingJ.html")
+
+@app.route('/dnhsMapBuildings/buildingK')
+def buildingK():
+    return render_template("/dnhsMapBuildings/buildingK.html")
+
+@app.route('/dnhsMapBuildings//buildingL')
+def buildingL():
+    return render_template("/dnhsMapBuildings/buildingL.html")
+
+@app.route('/dnhsMapBuildings/buildingM')
+def buildingM():
+    return render_template("/dnhsMapBuildings/buildingM.html")
+
+@app.route('/dnhsMapBuildings/buildingN')
+def buildingN():
+    return render_template("/dnhsMapBuildings/buildingN.html")
+
+@app.route('/dnhsMapBuildings/buildingP')
+def buildingP():
+    return render_template("/dnhsMapBuildings/buildingP.html")
+
+@app.route('/dnhsMapBuildings/buildingR')
+def buildingR():
+    return render_template("/dnhsMapBuildings/buildingR.html")
+
+@app.route('/dnhsMapBuildings/foodService')
+def foodService():
+    return render_template("/dnhsMapBuildings/foodService.html")
+
+@app.route('/dnhsMapBuildings/library')
+def library():
+    return render_template("/dnhsMapBuildings/library.html")
+
+@app.route('/dnhsMapBuildings/quad')
+def quad():
+    return render_template("/dnhsMapBuildings/quad.html")
+
+@app.route('/dnhsMapBuildings/stadium')
+def stadium():
+    return render_template("/dnhsMapBuildings/stadium.html")
+
+@app.route('/dnhsMapBuildings/tennis')
+def tennis():
+    return render_template("/dnhsMapBuildings/tennis.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

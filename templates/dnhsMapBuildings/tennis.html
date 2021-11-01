@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tennis</title>
+    {% extends "layouts/base.html" %}
+
+    {% set project = "Tennis" %}
+
+    {% block body %}
 </head>
 <body>
-<p> Tennis </p>
+<div class="delnorte">
+    <h1> Tennis </h1>
+</div>
+
 </body>
 </html>
+
+{%  endblock %}

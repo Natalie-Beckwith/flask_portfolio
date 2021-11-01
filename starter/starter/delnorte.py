@@ -1,77 +1,82 @@
-from flask import Flask, render_template, request
-app = Flask(__name__)
+from flask import Flask, render_template, request, Blueprint
+from main import app
 
-@app.route('admin')
+delnorte = Blueprint('starter', __name__,
+                       url_prefix='/starter',
+                       template_folder='templates',
+                       static_url_path='assets')
+
+@app.route('/admin')
 def admin():
     return render_template("admin.html")
 
-@app.route('basketball')
+@app.route('/basketball')
 def basketball():
     return render_template("basketball.html")
 
-@app.route('buildingA')
+@app.route('/buildingA')
 def buildingA():
     return render_template("buildingA.html")
 
-@app.route('buildingBGym')
+@app.route('/buildingBGym')
 def buildingBGym():
     return render_template("buildingBGym.html")
 
-@app.route('buildingD')
+@app.route('/buildingD')
 def buildingD():
     return render_template("buildingD.html")
 
-@app.route('buildingE')
+@app.route('/buildingE')
 def buildingE():
     return render_template("buildingE.html")
 
-@app.route('buildingG')
+@app.route('/buildingG')
 def buildingG():
     return render_template("buildingG.html")
 
-@app.route('buildingJ')
+@app.route('/buildingJ')
 def buildingJ():
     return render_template("buildingJ.html")
 
-@app.route('buildingK')
+@app.route('/buildingK')
 def buildingK():
     return render_template("buildingK.html")
 
-@app.route('buildingL')
+@app.route('/buildingL')
 def buildingL():
     return render_template("buildingL.html")
 
-@app.route('buildingM')
+@app.route('/buildingM')
 def buildingM():
     return render_template("buildingM.html")
 
-@app.route('buildingN')
+@app.route('/buildingN')
 def buildingN():
     return render_template("buildingN.html")
 
-@app.route('buildingP')
+@app.route('/buildingP')
 def buildingP():
     return render_template("buildingP.html")
 
-@app.route('buildingR')
+@app.route('/buildingR')
 def buildingR():
     return render_template("buildingR.html")
 
-@app.route('foodService')
+@app.route('/foodService')
 def foodService():
     return render_template("foodService.html")
 
-@app.route('library')
+@app.route('/library')
 def library():
     return render_template("library.html")
 
-@app.route('quad')
+@app.route('/quad')
 def quad():
     return render_template("quad.html")
 
-@app.route('/stadium/')
+@app.route('/dnhsMapBuildings/stadium')
 def stadium():
-    return render_template("stadium.html")
+    return render_template("/dnhsMapBuildings/stadium.html")
 
 @app.route('/dnhsMapBuildings/tennis')
 def tennis():

@@ -19,26 +19,17 @@
         let value
         let num = document.getElementById("box1").value;
 
-        if (num % 1 == 0) {
-            if (num % 2 == 0) {
-                value = "even"
-                document.getElementById("answer").innerHTML = "Your number is " + value
-            } else {
-                value = "odd"
-                document.getElementById("answer").innerHTML = "Your number is " + value
-            }
-        } else {
-            document.getElementById("answer").innerHTML = "This input is not an integer"
-        }
-        if (num % 2 === 0 || num % 2 === 1){
-            alert("num is int")
+        if (num % 2 === 0){
+            value = "even"
+            document.getElementById("answer").innerHTML = "Your number is " + value
 
-        } else {
-            alert("num is not int")
+        } else if(num % 2 === 1) {
+            value = "odd"
+            document.getElementById("answer").innerHTML = "Your number is " + value
+        } else{
+            document.getElementById("answer").innerHTML = "Your input is not an integer."
         }
     }
-
-
 </script>
 
 {% endblock %}
