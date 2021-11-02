@@ -220,6 +220,10 @@ def stadium():
 def tennis():
     return render_template("/dnhsMapBuildings/tennis.html")
 
+@app.route('/dnhsMapBuildings/pool')
+def pool():
+    return render_template("/dnhsMapBuildings/pool.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 #anything after this line will not work
