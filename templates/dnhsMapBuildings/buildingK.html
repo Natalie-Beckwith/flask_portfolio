@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% extends "layouts/base.html" %}
+
+    {% set project = "K Building" %}
+
+    {% block body %}
 </head>
-<body>
+<body
+
+        style="background-image:url(https://d2rzw8waxoxhv2.cloudfront.net/facilities/large/95906f33a74c809ebf6f/1519414207056-180-36.jpg);
+
+background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-position:100% 100%;">
+
+
+<div class="delnorte">
+    <h1 > The K Building </h1>
+</div>
+
+<div style="font-size:18px";>
+    <br>
+    <div style="background-color: rgba(255, 255, 255,.8); width: 80%; height: 70vh; color: black; margin: auto; padding-top:15px; padding-left:15px">
+
+        <h3>About the k Building</h3>
+        <p style="padding-right: 50%;"> The K building mostly consists of science classes as well as a few other core classes. It is located near the back
+        entrance of the school where the bike rack is. </p>
+
+
+        <!-- <img style="padding-right:15px; float:right;" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images03.jpg;" height="70%" width="50%"> -->
+    </div>
+</div>
+
+
 
 </body>
 </html>
+
+{%  endblock %}
