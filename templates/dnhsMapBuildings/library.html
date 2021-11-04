@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% extends "layouts/base.html" %}
+
+    {% set project = "Library" %}
+
+    {% block body %}
 </head>
-<body>
+<body
+
+        style="background-image:url(https://d2rzw8waxoxhv2.cloudfront.net/facilities/large/95906f33a74c809ebf6f/1519414207056-180-36.jpg);
+
+background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-position:100% 100%;">
+
+
+<div class="delnorte">
+    <h1 > The Library </h1>
+</div>
+
+<div style="font-size:18px";>
+    <br>
+    <div style="background-color: rgba(255, 255, 255,.8); width: 80%; height: 70vh; color: black; margin: auto; padding-top:15px; padding-left:15px">
+
+        <h3>About the Library</h3>
+        <p style="padding-right: 50%;"> The library is the building where many students either go to check out books or to study. This building is
+        often very occupied but quiet. The selection of available books is quite vast and that makes this building a very good source for books. Within the library
+        there is also a computer lab, which is often used for research projects. The library offers a printing service for a very cheap cost to students that need
+        to print their papers at the last minute. Some students have elected themselves to work at the library for 1 of their academic periods as a library
+        assistant.</p>
+
+        <!-- <img style="padding-right:15px; float:right;" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images03.jpg;" height="70%" width="50%"> -->
+    </div>
+</div>
+
+
 
 </body>
 </html>
+
+{%  endblock %}
