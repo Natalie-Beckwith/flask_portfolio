@@ -223,6 +223,10 @@ def tennis():
 def pool():
     return render_template("/dnhsMapBuildings/pool.html")
 
+@app.route('/Projects/feedback')
+def feedback():
+    return render_template("/Projects/feedback.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 #anything after this line will not work

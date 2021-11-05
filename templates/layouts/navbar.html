@@ -14,8 +14,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
         <ul class="navbar-nav mr-auto">
 
-            <ul class="navbar-nav mr-auto">
-
                 <li class="nav-item active">
                     <a class="nav-link" href="/map">Map</a>
                 </li>
@@ -55,8 +53,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/geolocation">Geolocation</a>
                     <a class="dropdown-item" href="/covidapi">YouTube</a>
                 </div>
-                    <ul class="navbar-nav mr-auto">
 
+            <li class="nav-item active">
+                <a class="nav-link" href="/Projects/feedback">Feedback Form</a>
+
+            <li class="nav-item active">
+                <a class="nav-link" type="button" onclick='toggleLight()'>Toggle Light Theme</a>
+            </li>
+
+
+
+                        <script>
+                            function toggleLight() {
+                                document.getElementsByClassName("delnorte").style.backgroundImage = 'https://study.com/cimages/multimages/16/img_1644.jpg'
+                            }
+                        </script>
             </ul></li>
         </li> </ul>
         </ul>
