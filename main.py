@@ -227,6 +227,10 @@ def pool():
 def feedback():
     return render_template("/Projects/feedback.html")
 
+@app.route('/darkAndLightTest')
+def darkAndLightTest():
+    return render_template("/darkAndLightTest.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 #anything after this line will not work
