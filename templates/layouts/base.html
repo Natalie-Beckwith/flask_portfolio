@@ -135,22 +135,21 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
 
-    <div>
-        <input type="button" id="Light" value="Light" onclick="lightMode()">
-    </div>
-
     <script>
 
+       // base.html has the checkbox html for the toggle
        function lightMode() {
            var element = document.body;
            element.classList.toggle("light");
-           if (document.getElementById("Light").value === "Dark") {
-               document.getElementById("Light").value = "Light"
-           }
-           else {
-               document.getElementById("Light").value = "Dark"
-           }
-
+		   
+           if (document.getElementById("label-dark").innerHTML === "Dark") 
+		   {
+		   	   document.getElementById("label-dark").innerHTML = "Light";
+		   }
+		   else
+		   {
+		   	   document.getElementById("label-dark").innerHTML = "Dark"
+		   }
        }
 
     </script>
