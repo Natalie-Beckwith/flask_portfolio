@@ -233,4 +233,5 @@ def darkAndLightTest():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
 #anything after this line will not work
