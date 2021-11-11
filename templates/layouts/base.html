@@ -137,24 +137,46 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <script>
 
+		window.onload = function () {
+			let lightModeCheck = document.getElementById("dark-chk");
+			let lightModeText = document.getElementById("label-dark");
+		
+			// get stored variable
+			let lightModeOn = localStorage.getItem("label-dark");
+
+			if(lightModeOn != null) {
+				if(lightModeOn === "Light") {
+		            var element = document.body;
+		            element.classList.toggle("light");
+				
+					lightModeCheck.checked = false;
+					lightModeText.innerHTML = "Light";
+				}
+				else {
+					lightModeCheck.checked = true;
+					lightModeText.innerHTML = "Dark";
+				} 
+		    }
+		}
+
        // base.html has the checkbox html for the toggle
        function lightMode() {
            var element = document.body;
            element.classList.toggle("light");
 		   
            if (document.getElementById("label-dark").innerHTML === "Dark") 
-		   {
+		   {			   
 		   	   document.getElementById("label-dark").innerHTML = "Light";
+		       localStorage.setItem("label-dark", "Light");
 		   }
 		   else
-		   {
-		   	   document.getElementById("label-dark").innerHTML = "Dark"
+		   {			   
+		   	   document.getElementById("label-dark").innerHTML = "Dark";
+		       localStorage.setItem("label-dark", "Dark");
 		   }
        }
 
     </script>
-
-
 
     {% block meta %}
     {% endblock %}
